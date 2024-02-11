@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Provider } from "./utils/Provider";
+import { Provider } from "./utils/provider"
 import "./globals.css";
+import Navmenu from "@/components/Navmenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} h-full bg-[#FFFFFF] dark:bg-[#0F0B17] text-[#22242C] selection:bg-[#0F0B17] dark:selection:text-[#06030B] selection:text-white dark:selection:bg-[#F3F3F3] dark:text-[#F2F3F3] duration-300 transition-all ease-in-out`}>
         {/* next theme provider via util.tsx */}
         <Provider>
+          <Navmenu/>
           <main className="mx-auto max-w-[1120px]">
             {children}
             </main>
