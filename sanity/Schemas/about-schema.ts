@@ -22,7 +22,7 @@ const about = {
                 hotspot: true
             }
         }),
-        
+
         defineField({
             name: "metadescription",
             title: "Meta-description",
@@ -31,7 +31,7 @@ const about = {
         
         defineField({
             name: 'bio',
-            title: 'Bi0',
+            title: 'Bio',
             type: 'array',
             of: [{type: 'block'}]
         }),
