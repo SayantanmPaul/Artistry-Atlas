@@ -33,6 +33,12 @@ const tool = defineField({
             title: "Tool Official URL",
             type: "url",
         },
+        {
+            name: 'category',
+            title: 'Category',
+            type: 'reference',
+            to: [{ type: 'category'}]
+        }
     ]
 })
 
