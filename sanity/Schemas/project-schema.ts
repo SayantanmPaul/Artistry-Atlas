@@ -88,10 +88,7 @@ const project = defineField({
             title: 'Tools',
             type: "array",
             of: [
-                { type: 'string' },
-                {
-                    type: 'text'
-                }
+                { type: 'string' }
             ]
         }
 
