@@ -4,11 +4,10 @@
 
 import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
-import {structureTool} from 'sanity/structure'
-
-// Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
+import { structureTool } from 'sanity/structure'
 import {apiVersion, dataset, projectId} from './sanity/env'
 import {schema} from './sanity/schema'
+import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
 
 export default defineConfig({
   basePath: '/admin',
@@ -17,7 +16,19 @@ export default defineConfig({
   // Add and edit the content schema in the './sanity/schema' folder
   schema,
   plugins: [
-    structureTool(),
+    structureTool({
+      structure: (S, context) => {
+        return S.list()
+          .title('Content')
+          .items([
+            S.documentTypeListItem('about').title('About Myself'),
+            orderableDocumentListDeskItem({type: 'tool', S, context}),
+            orderableDocumentListDeskItem({type: 'category', S, context}),
+            orderableDocumentListDeskItem({type: 'project', S, context}),
+            orderableDocumentListDeskItem({ type: 'education', S, context }),
+        ])
+      }
+    }),
     // Vision is a tool that lets you query your content with GROQ in the studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({defaultApiVersion: apiVersion}),

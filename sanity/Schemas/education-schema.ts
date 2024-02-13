@@ -1,15 +1,18 @@
 import { defineField } from "sanity";
+import { orderRankField, orderRankOrdering } from "@sanity/orderable-document-list"
 
 const education = defineField({
     name: 'education',
     title: 'Education',
     type: 'document',
+    orderings: [orderRankOrdering],
     fields: [
         {
             name: 'institution',
             title: 'Institution Name',
             type: 'string'
         },
+        orderRankField({ type: 'education' }),
         {
             name: 'institutionlogo',
             title: 'Institution Logo',
