@@ -21,8 +21,10 @@ export default function RootLayout({
       <body className={`${inter.className} h-full bg-[#FFFFFF] dark:bg-[#0F0B17] text-[#22242C] selection:bg-[#0F0B17] dark:selection:text-[#06030B] selection:text-white dark:selection:bg-[#F3F3F3] dark:text-[#F2F3F3] duration-300 transition-all ease-in-out`}>
         {/* next theme provider via util.tsx */}
         <Provider>
-          <Navmenu/>
-          <main className="mx-auto max-w-[1120px]">
+          <div className=" pt-4 lg:px-0 px-4">
+            <Navmenu />
+          </div>
+          <main className="mx-auto max-w-[358px] lg:max-w-[1050px]">
             {children}
             </main>
         </Provider>
