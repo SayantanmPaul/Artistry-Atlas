@@ -26,6 +26,7 @@ export default defineConfig({
             orderableDocumentListDeskItem({type: 'category', S, context}),
             orderableDocumentListDeskItem({type: 'project', S, context}),
             orderableDocumentListDeskItem({ type: 'education', S, context }),
+            orderableDocumentListDeskItem({ type: 'experience', S, context }),
             orderableDocumentListDeskItem({ type: 'links', S, context }),
         ])
       }
