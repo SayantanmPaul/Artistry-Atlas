@@ -14,13 +14,12 @@ const ThemeSwitch = () => {
         return null
     }
     
-  return (
-      <button onClick={() => {
-          setTheme(theme==='dark'? 'light' : 'dark')
-      }}>
-          {theme==='dark'? 'light': 'dark'}
+    return (
+    <button onClick={() => {
+        setTheme(theme==='dark'? 'light' : 'dark')
+    }}>
+        {theme==='dark'? 'light': 'dark'}
     </button>
-  )
-}
+)}
 
 export default ThemeSwitch
