@@ -5,6 +5,7 @@ import "./globals.css";
 import Navmenu from "@/components/Navmenu";
 import BgGradient from '../../public/assets/glow-vector.svg'
 import Image from "next/image";
+import StickyBar from "@/components/StickyBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,9 +28,12 @@ export default function RootLayout({
           <div className=" pt-4 lg:px-0 px-4 z-10 backdrop-blur-md">
             <Navmenu />
           </div>
-          <main className="mx-auto max-w-[358px] lg:max-w-[1050px]">
-            {children}
+          <section>
+            <main className="mx-auto max-w-[358px] lg:max-w-[1050px] flex flex-row gap-16">
+              <StickyBar />
+              {children}
             </main>
+          </section>
         </Provider>
       </body>
     </html>
