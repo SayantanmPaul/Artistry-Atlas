@@ -29,7 +29,7 @@ export default function RootLayout({
             <Navmenu />
           </div>
           <section>
-            <main className="mx-auto max-w-[358px] lg:max-w-[1050px] flex flex-row gap-16">
+            <main className="mx-auto max-w-[358px] lg:max-w-[1018px] flex flex-row gap-16 lg:pt-[64px] pt-4">
               <StickyBar />
               {children}
             </main>
