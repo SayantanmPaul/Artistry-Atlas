@@ -22,16 +22,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} h-full relative bg-[#FFFFFF] dark:bg-[#0F0B17] text-[#22242C] selection:bg-[#0F0B17] dark:selection:text-[#06030B] selection:text-white dark:selection:bg-[#F3F3F3] dark:text-[#F2F3F3] duration-300 transition-all ease-in-out`}>
-        <Image src={BgGradient} alt="Bg_gradient" width={1280} height={1020} className="absolute lg:bg-cover w-full inset-0 m-auto lg:-top-[432px] -top-[100px] lg:opacity-70 opacity-50 -z-10 lg:max-w-[1440px] overflow-hidden select-none" />
+        <Image src={BgGradient} alt="Bg_gradient" width={1280} height={1020} className="absolute lg:bg-cover w-full inset-0 m-auto lg:-top-[832px] -top-[210px] lg:opacity-70 opacity-50 -z-10 lg:max-w-[1440px] overflow-hidden select-none" />
         {/* next theme provider via util.tsx */}
         <Provider>
-          <div className=" pt-4 lg:px-0 px-4 z-10 backdrop-blur-md">
+          <div className=" pt-4 lg:px-0 px-2 z-10 backdrop-blur-md">
             <Navmenu />
           </div>
           <section>
-            <main className="mx-auto max-w-[358px] lg:max-w-[1018px] flex flex-row gap-16 lg:pt-[64px] pt-4">
+            <main className="mx-auto max-w-full lg:max-w-[1018px] flex lg:flex-row md:flex-row flex-col lg:gap-16 gap-3 lg:pt-[64px] md:pt-[24px] pt-4 px-2 lg:px-0 md:px-4">  
               <StickyBar />
+              <div className="">
               {children}
+              </div>
             </main>
           </section>
         </Provider>
