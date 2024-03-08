@@ -134,7 +134,7 @@ const StickyBar = async() => {
             const IconComp= SocialsLogo[data.logo]
             return IconComp ? (
               <Link href={data.link} key={i} passHref legacyBehavior>
-                <a target="_blank" rel="noreferrer">
+                <a target="_blank" rel="noref">
                 <div
                   key={i}
                   className=' flex flex-row items-center gap-[6px]'

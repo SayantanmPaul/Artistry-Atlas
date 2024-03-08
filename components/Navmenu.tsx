@@ -5,8 +5,8 @@ import Link from 'next/link'
 import { Poppins } from 'next/font/google'
 import NavLinks from '../constant/index'
 import logo from '../public/assets/letter-s (1) 1.svg'
-import { FiCommand } from "react-icons/fi";
 
+import QuickActions from './QuickActions'
 const poppins = Poppins({
     weight: '700',
     subsets: ['latin'],
@@ -37,11 +37,9 @@ const Navmenu = () => {
                 </ul>
                 <div className='flex flex-row gap-4 items-center'>
                     <Link href={'Links'}>
-                            <li className={`${poppins.className} bg-clip-text text-transparent inline-block bg-gradient-to-r dark:from-[#FFC729] dark:to-[#C84E00] dark:bg-gradient-to-r from-[#FC6584] to-[#0D25B9] font-black text-sm duration-300 ease-in-out lg:hidden `}>links</li>
-                        </Link>
-                    <button className='border border-[#C4C4C4] dark:border-[#14141D] border-opacity-30 rounded-full hover:border-opacity-90 hover:animate-spin-once duration-300'>
-                        <FiCommand size={16} className=' lg:w-4 lg:h-4 w-[18px] h-[18px] lg:m-[11px] m-[8px]'/>
-                    </button>
+                        <li className={`${poppins.className} bg-clip-text text-transparent inline-block bg-gradient-to-r dark:from-[#FFC729] dark:to-[#C84E00] dark:bg-gradient-to-r from-[#FC6584] to-[#0D25B9] font-black text-sm duration-300 ease-in-out lg:hidden `}>links</li>
+                    </Link>
+                    <QuickActions/>
                 </div>
             </div>  
         </>
