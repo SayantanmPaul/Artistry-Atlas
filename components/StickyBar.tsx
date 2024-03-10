@@ -83,24 +83,24 @@ const StickyBar = async() => {
       </div>
       <div className=' flex flex-col lg:max-w-[184px] md:max-w-[184px] lg:gap-4 md:gap-2 pt-[72px] lg:pt-0 md:pt-0  z-10 pl-2 lg:pl-0'>
       {/* admin image */}
-        {post?.length > 0 && post?.map((post, i) => (
-          <>
-        <div className=' flex flex-row justify-between items-end'>
-          <Image
-          key={i}
-          src={urlFor(post.adminimage).url()}
-          alt='author'
-          width={500}
-          height={500}
-          loading='lazy'
-          className=' rounded-full select-none overflow-hidden lg:w-[175px] md:w-[124px] md:h-[124px] w-[98px] lg:h-[175px] h-[98px] lg:p-[4px] p-[2px] border-[1.5px] border-[#FC00FF]'
-          />
-          <Link href={'/Links'}>
-            <button className='block lg:hidden md:hidden text-[10px] text-[#06030B] dark:text-white right-3 px-[12px] py-[6px]  border border-[#9A55F2] rounded-2xl absolute top-[196px] focus:bg-purple-950 duration-300 ease-in-out'>get in touch</button>
-          </Link>
-        </div>  
-      </>
+      {post?.length > 0 && post?.map((post, i) => (
+        <React.Fragment key={i}>
+          <div className=' flex flex-row justify-between items-end'>
+            <Image
+              src={urlFor(post.adminimage).url()}
+              alt='author'
+              width={500}
+              height={500}
+              loading='lazy'
+              className=' rounded-full select-none overflow-hidden lg:w-[175px] md:w-[124px] md:h-[124px] w-[98px] lg:h-[175px] h-[98px] lg:p-[4px] p-[2px] border-[1.5px] border-[#FC00FF]'
+            />
+            <Link href={'/Links'}>
+              <button className='block lg:hidden md:hidden text-[10px] text-[#06030B] dark:text-white right-3 px-[12px] py-[6px]  border border-[#9A55F2] rounded-2xl absolute top-[196px] focus:bg-purple-950 duration-300 ease-in-out'>get in touch</button>
+            </Link>
+          </div>  
+        </React.Fragment>
       ))}
+
       <div>
           <h2 className={`${robotoBold.className} font-semibold text-[18px] leading-5 dark:text-[#F2F3F3] text-[#494E52] duration-300 pt-2 lg:pt-0 md:pt-2`}>Sayantan Paul</h2>
           
