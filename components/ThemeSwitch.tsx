@@ -16,6 +16,7 @@ const ThemeSwitch = () => {
     
     return (
         <button
+            aria-label='theme-switch'
             className='hover:animate-spin-once duration-300'
             onClick={() => {
             setTheme(theme === 'dark' ? 'light' : 'dark')

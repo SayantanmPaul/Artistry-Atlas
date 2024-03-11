@@ -62,7 +62,7 @@ const QuickActions = () => {
     <div>
     <AlertDialog>
         <AlertDialogTrigger asChild className=' flex justify-center'>
-            <button className='border border-[#C4C4C4] dark:border-[#14141D] border-opacity-30 rounded-full hover:border-opacity-90 '>
+            <button aria-label='toggle-quick-actions' className='border border-[#C4C4C4] dark:border-[#14141D] border-opacity-30 rounded-full hover:border-opacity-90 hover:animate-spinonce '>
                 <FiCommand size={16} className=' lg:w-4 lg:h-4 w-[18px] h-[18px] lg:m-[11px] m-[8px] ' />
             </button>
         </AlertDialogTrigger>
@@ -77,7 +77,9 @@ const QuickActions = () => {
                     <div className=' flex flex-row gap-[8px] items-center'>
                         <p className={` ${interregular.className} text-[#AFAFAF] dark:text-[#8B8B8B] font-medium text-[14px] text-center align-middle leading-[22px]`}>Exit</p>
                         <AlertDialogCancel >
-                        <button className={`${interbold.className} border dark:border-[#2F2F43] border-[#E5E5E5] text-[10px] text-[#404040] dark:text-[#FFFFFF] font-bold leading-[22px] px-[6px] rounded-[4px]`}>ESC</button>
+                            <button
+                                aria-label='close'
+                                className={`${interbold.className} border dark:border-[#2F2F43] border-[#E5E5E5] text-[10px] text-[#404040] dark:text-[#FFFFFF] font-bold leading-[22px] px-[6px] rounded-[4px]`}>ESC</button>
                         </AlertDialogCancel>
                     </div>
                 </div>

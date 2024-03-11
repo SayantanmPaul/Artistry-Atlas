@@ -100,7 +100,7 @@ const StickyBar = async() => {
           </React.Fragment>
         ))}
         <Link href={'/Links'}>
-          <button className=' block lg:hidden md:hidden text-[10px] text-[#06030B] dark:text-white right-3 mb-6 px-[12px] py-[6px] border border-[#9A55F2] rounded-2xl top-[196px] focus:bg-purple-950 duration-300 ease-in-out mr-1'>get in touch</button>
+          <button aria-label='socials' className=' block lg:hidden md:hidden text-[10px] text-[#06030B] dark:text-white right-3 mb-6 px-[12px] py-[6px] border border-[#9A55F2] rounded-2xl top-[196px] focus:bg-purple-950 duration-300 ease-in-out mr-1'>get in touch</button>
         </Link>
       </div>
 

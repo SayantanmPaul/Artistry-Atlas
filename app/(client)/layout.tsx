@@ -9,7 +9,7 @@ import StickyBar from "@/components/StickyBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sayantan Paul | Software Developer ",
+  title: "Sayantan Paul | Developer ",
   description: "Sayantan Paul is a passionate Cross Platform Developer focusing on continuous learning and solving real-world challenges.",
   icons: {
     icon: './favicon.ico'
