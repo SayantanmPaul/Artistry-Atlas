@@ -68,7 +68,7 @@ const StickyBar = async() => {
   const post: About[] = await aboutMySlef()
   return (
     <>
-      <div className=' block lg:hidden md:hidden absolute inset-2 top-[70px]'>
+      <div className=' block lg:hidden md:hidden absolute inset-2 top-[70px] -z-10'>
       {post?.length > 0 && post?.map((post,i) => (
           <Image
           key={i}
@@ -77,29 +77,32 @@ const StickyBar = async() => {
           width={500}
           height={500}
           loading='lazy'
-          className='rounded-xl p-[2px] border dark:border-[#413A6F] h-[122px] w-full object-cover border-[#FFFFFF] border-opacity-50 dark:border-opacity-40'
+          className='rounded-xl p-[2px] border dark:border-[#413A6F] h-[122px] w-full object-cover border-[#FFFFFF] border-opacity-50 dark:border-opacity-40 mx-auto'
         />
         ))}
       </div>
-      <div className=' flex flex-col lg:max-w-[184px] md:max-w-[184px] lg:gap-4 md:gap-2 pt-[72px] lg:pt-0 md:pt-0  z-10 pl-2 lg:pl-0'>
-      {/* admin image */}
-      {post?.length > 0 && post?.map((post, i) => (
-        <React.Fragment key={i}>
-          <div className=' flex flex-row justify-between items-end'>
-            <Image
-              src={urlFor(post.adminimage).url()}
-              alt='author'
-              width={500}
-              height={500}
-              loading='lazy'
-              className=' rounded-full select-none overflow-hidden lg:w-[175px] md:w-[124px] md:h-[124px] w-[98px] lg:h-[175px] h-[98px] lg:p-[4px] p-[2px] border-[1.5px] border-[#FC00FF]'
-            />
-            <Link href={'/Links'}>
-              <button className='block lg:hidden md:hidden text-[10px] text-[#06030B] dark:text-white right-3 px-[12px] py-[6px]  border border-[#9A55F2] rounded-2xl absolute top-[196px] focus:bg-purple-950 duration-300 ease-in-out'>get in touch</button>
-            </Link>
-          </div>  
-        </React.Fragment>
-      ))}
+      <div className=' flex flex-col lg:max-w-[184px] md:max-w-[184px] lg:gap-4 md:gap-2 pt-[72px] lg:pt-0 md:pt-0 pl-2 lg:pl-0'>
+        <div className=' flex flex-row justify-between items-end'>
+        {/* admin image */}
+        {post?.length > 0 && post?.map((post, i) => (
+          <React.Fragment key={i}>
+            <div className=' flex flex-row justify-between'>
+              <Image
+                src={urlFor(post.adminimage).url()}
+                alt='author'
+                width={500}
+                height={500}
+                loading='lazy'
+                className=' rounded-full select-none overflow-hidden lg:w-[175px] md:w-[124px] md:h-[124px] w-[104px] lg:h-[175px] h-[104px] lg:p-[4px] p-[2px] border-[1.5px] border-[#FC00FF]'
+              />
+              
+            </div>  
+          </React.Fragment>
+        ))}
+        <Link href={'/Links'}>
+          <button className=' block lg:hidden md:hidden text-[10px] text-[#06030B] dark:text-white right-3 mb-6 px-[12px] py-[6px] border border-[#9A55F2] rounded-2xl top-[196px] focus:bg-purple-950 duration-300 ease-in-out mr-1'>get in touch</button>
+        </Link>
+      </div>
 
       <div>
           <h2 className={`${robotoBold.className} font-semibold text-[18px] leading-5 dark:text-[#F2F3F3] text-[#494E52] duration-300 pt-2 lg:pt-0 md:pt-2`}>Sayantan Paul</h2>
