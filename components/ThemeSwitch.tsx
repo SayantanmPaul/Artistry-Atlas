@@ -21,8 +21,8 @@ const ThemeSwitch = () => {
             setTheme(theme === 'dark' ? 'light' : 'dark')
     }}>
             {theme === 'dark' ?
-                <MdOutlineDarkMode size={24} />
-                : <MdOutlineLightMode size={24} />}
+                <MdOutlineDarkMode size={24} className=' w-[14px] h-[14px] lg:w-[24px] lg:h-[24px] dark:text-[#000000] text-[#F2F3F3] lg:dark:text-[#F2F3F3] lg:text-[#000000]' />
+                : <MdOutlineLightMode size={24} className='w-[14px] h-[14px] lg:w-[24px] lg:h-[24px] dark:text-[#000000] text-[#F2F3F3] lg:dark:text-[#F2F3F3] lg:text-[#000000]' />}
     </button>
 )}
 

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: "Sayantan Paul | Software Developer ",
   description: "Sayantan Paul is a passionate Cross Platform Developer focusing on continuous learning and solving real-world challenges.",
   icons: {
-    icon: '/favicon.ico'
+    icon: './favicon.ico'
   }
 };  
 
@@ -23,12 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true} className={`${inter.className} h-full relative bg-[#FFFFFF] dark:bg-[#0F0B17] text-[#22242C] selection:bg-[#0F0B17] dark:selection:text-[#06030B] selection:text-white dark:selection:bg-[#F3F3F3] dark:text-[#F2F3F3] duration-300 transition-all ease-in-out`}>
-        <link rel="icon" href="../../public/favicon.ico" sizes="any"/>
-        <Image src={BgGradient} alt="Bg_gradient" width={1280} height={1020} className="absolute lg:bg-cover w-full inset-0 m-auto lg:-top-[832px] -top-[210px] lg:opacity-70 opacity-50 -z-10 lg:max-w-[1440px] overflow-hidden select-none" />
+      <body suppressHydrationWarning className={`${inter.className} h-full relative bg-[#FFFFFF] dark:bg-[#0F0B17] text-[#22242C] selection:bg-[#0F0B17] dark:selection:text-[#06030B] selection:text-white dark:selection:bg-[#F3F3F3] dark:text-[#F2F3F3] duration-300 transition-all ease-in-out`}>
+        <Image src={BgGradient} alt="Bg_gradient" width={1280} height={1020} className="absolute lg:bg-cover w-full inset-0 m-auto lg:-top-[832px] -top-[210px] lg:opacity-70 opacity-50 -z-30 lg:max-w-[1440px] overflow-hidden select-none" />
         {/* next theme provider via util.tsx */}
         <Provider>
-          <div className=" pt-4 lg:px-0 px-2 z-10 backdrop-blur-md">
+          <div className=" pt-4 lg:px-0 px-2 backdrop-blur-md ">
             <header>
               <Navmenu />
             </header>

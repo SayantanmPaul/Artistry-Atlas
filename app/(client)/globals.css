@@ -78,3 +78,9 @@
 .nav_font.active{
   text-shadow: 0 0 1px currentColor;
 }
+
+
+.custom-blur{
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
