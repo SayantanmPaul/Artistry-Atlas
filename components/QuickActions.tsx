@@ -19,6 +19,7 @@ import Space from '../public/assets/spacedev.png'
 import ThemeSwitch from './ThemeSwitch';
 import { Inter } from 'next/font/google'
 import { useTheme } from 'next-themes'
+import { toast } from 'sonner';
 
 const interbold = Inter({
     weight: '700',
@@ -57,6 +58,16 @@ const QuickActions = () => {
         setMounted(true)
     }, [])
 
+    //email copy to clipboard
+
+    const EmailCopy = 'iam.paulsayantan06@gmail.com'
+    
+    const copyToClip=() => {
+        navigator.clipboard.writeText(EmailCopy)
+        toast('email is copied ✨', {
+            description: 'you can mail me anytime:)'
+        })
+    }
     return (
     <>
     <div>
@@ -108,9 +119,11 @@ const QuickActions = () => {
             </div>
             <div className=' h-full w-[2px] bg-[#D0CADF]/40 dark:bg-[#413A6F]/20'></div>
             <div className='flex flex-col items-center gap-[5px] group'>
-                <div className=' bg-[#D0CADF]/40 dark:bg-[#413A6F]/20 dark:group-hover:bg-[#413A6F]/40 group-hover:bg-[#D0CADF]/60 w-[40px] h-[40px] rounded-md flex justify-center items-center duration-300 ease-in-out'>
+                <button 
+                    onClick={copyToClip}
+                    className=' bg-[#D0CADF]/40 dark:bg-[#413A6F]/20 dark:group-hover:bg-[#413A6F]/40 group-hover:bg-[#D0CADF]/60 w-[40px] h-[40px] rounded-md flex justify-center items-center duration-300 ease-in-out'>
                     <MdOutlineEmail size={25} className=' dark:text-white text-[#06030B]' />
-                </div>
+                </button>
                 <p className=' text-[#8B8B8B] dark:text-[#AFAFAF] dark:group-hover:text-white leading-[22px] font-medium text-[12px] duration-300 ease-in-out group-hover:text-[#404040]'>email</p>
             </div>
             <div className='flex flex-col items-center gap-[5px] group'>
@@ -146,10 +159,11 @@ const QuickActions = () => {
                     </a>
                 </Link>
                 )})}
-                </div>
+                </div>    
             </AlertDialogContent>
         </AlertDialog>
     </div>
+        
     </>
 )}
 

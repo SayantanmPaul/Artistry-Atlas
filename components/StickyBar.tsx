@@ -76,7 +76,6 @@ const StickyBar = async() => {
           alt='bannerImage'
           width={500}
           height={500}
-          loading='lazy'
           className='rounded-xl p-[2px] border dark:border-[#413A6F] h-[122px] w-full object-cover border-[#FFFFFF] border-opacity-50 dark:border-opacity-40 mx-auto'
         />
         ))}
@@ -124,7 +123,7 @@ const StickyBar = async() => {
           {/* location and email */}
           <div className=' flex flex-row items-center gap-[4px]'>
             <HiLocationMarker size={14} />
-            <p className=' text-[13px] leading-5 text-[#494E52] dark:text-[#C4C4C4] text-wrap duration-300'> Kolkata, West Bengal, India</p>
+            <p className=' text-[13px] tracking-tight leading-5 text-[#494E52] dark:text-[#C4C4C4] text-wrap duration-300'> Kolkata, West Bengal, India</p>
           </div>
           <Link href='mailto:iam.paulsayantan06@gmail.com'>
             <div className=' flex flex-row items-center gap-[6px]'>

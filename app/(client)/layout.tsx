@@ -6,8 +6,9 @@ import Navmenu from "@/components/Navmenu";
 import BgGradient from '../../public/assets/glow-vector.svg'
 import Image from "next/image";
 import StickyBar from "@/components/StickyBar";
-const inter = Inter({ subsets: ["latin"] });
+import { Toaster } from "sonner";
 
+const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Sayantan Paul | Developer ",
   description: "Sayantan Paul is a passionate Cross Platform Developer focusing on continuous learning and solving real-world challenges.",
@@ -40,7 +41,11 @@ export default function RootLayout({
               </div>
             </main>
           </section>
+          
         </Provider>
+        <div className='absolute'>
+          <Toaster closeButton />
+        </div>
       </body>
     </html>
   );
