@@ -16,6 +16,7 @@ import { BsTwitterX } from "react-icons/bs";
 import { FaMedium } from "react-icons/fa6";
 import NoSPam from '../public/assets/nospam.png'
 import Space from '../public/assets/spacedev.png'
+import MessageDialog from './MessageDialog';
 import ThemeSwitch from './ThemeSwitch';
 import { Inter } from 'next/font/google'
 import { useTheme } from 'next-themes'
@@ -133,9 +134,7 @@ const QuickActions = () => {
                 <p className=' text-[#8B8B8B] dark:text-[#AFAFAF] dark:group-hover:text-white leading-[22px] font-medium text-[12px] duration-300 ease-in-out group-hover:text-[#404040]'>{theme}</p>
             </div>
             <div className='flex flex-col items-center gap-[5px] group'>
-                <div className='bg-[#D0CADF]/40 dark:bg-[#413A6F]/20 dark:group-hover:bg-[#413A6F]/40 group-hover:bg-[#D0CADF]/60 w-[40px] h-[40px] rounded-md flex justify-center items-center duration-300 ease-in-out'>
-                    <BiMessageDetail size={24} className=' dark:text-white text-[#06030B]' />
-                </div>
+                <MessageDialog/>
                 <p className='text-[#8B8B8B] dark:text-[#AFAFAF] dark:group-hover:text-white leading-[22px] font-medium text-[12px] duration-300 ease-in-out group-hover:text-[#404040]'>message</p>
             </div>
         </div>
