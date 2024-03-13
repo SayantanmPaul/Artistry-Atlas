@@ -46,7 +46,7 @@ export default function RootLayout({
           
         </Provider>
         <div className='absolute'>
-          <Toaster closeButton />
+          <Toaster closeButton position="top-right"/>
         </div>
       </body>
     </html>
