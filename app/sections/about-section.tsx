@@ -16,7 +16,7 @@ const AboutSection = async() => {
             <h1 className={`${inter.className} font-bold leading-[28px] text-[20px] lg:text-[24px] dark:text-[#F2F3F3] text-[#06030B]`}>About Me</h1>
             <span className={`  text-[14px] dark:text-[#C4C4C4] text-[#494E52] lg:text-[16px] lg:leading-[27px] leading-[22px] text-pretty antialiased text-ellipsis font-medium`}>
                 {AboutDocs.map((data, i) => (
-                    <span key={i} className='prose dark:prose-invert lg:text-[16px] text-[14px] break-words text-wrap'>
+                    <span key={i} className='prose dark:prose-invert lg:text-[16px] break-words text-wrap'>
                         <PortableText value={data.bio}/>
                     </span>
                 ))}
