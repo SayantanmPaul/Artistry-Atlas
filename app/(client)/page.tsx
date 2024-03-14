@@ -4,7 +4,7 @@ import AboutSection from '@/app/sections/about-section'
 export const dynamic = 'force-dynamic'
 const Home = () => {
   return (
-    <div>
+    <div className='max-w-[770px]'>
       <AboutSection/>
     </div>
   )
