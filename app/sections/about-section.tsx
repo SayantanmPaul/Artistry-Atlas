@@ -17,10 +17,10 @@ const AboutSection = async() => {
   return (
     <>
         <div className='flex flex-col lg:gap-[16px] gap-[4px]'>
-            <div className=' mb-1 lg:mb-0 md:mb-0'>
+            <div className=''>
                 <SectionHead title='About me'/>
             </div>
-            <div className=' block lg:hidden md:hidden h-[1.5px] w-full dark:bg-[#C4C4C4]/30 bg-[#494E52]/20 rounded-full'></div>
+            {/* <div className=' block lg:hidden md:hidden h-[1.5px] w-full dark:bg-[#C4C4C4]/30 bg-[#494E52]/20 rounded-full'></div> */}
             <span className={`${roboto.className}text-[14px] dark:text-[#C3C3C3] text-[#494E52] lg:leading-[27px] leading-[8px] text-pretty antialiased text-ellipsis font-medium`}>
                 {AboutDocs.map((data, i) => (
                     <span key={i} className='prose dark:prose-invert lg:text-[17.5px] text-[13.5px] break-words text-wrap list-none tracking-wide'>
@@ -28,7 +28,7 @@ const AboutSection = async() => {
                     </span>
                 ))}
             </span>
-            <span className='lg:inline-flex md:inline-flex items-start lg:my-2 my-4  '>
+            <span className='lg:inline-flex md:inline-flex items-start lg:my-2 my-4 '>
             <Link href="/sayantanpaul-resume.pdf" passHref legacyBehavior>
                 <a target="_blank" rel="noref">
                 <Button

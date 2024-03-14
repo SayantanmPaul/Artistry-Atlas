@@ -5,7 +5,7 @@ import { client } from '@/sanity/lib/client';
 import { HiLocationMarker } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
 import { FaSquareXTwitter, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa6";
-import { MdWorkHistory } from "react-icons/md";
+import { SiWorkplace } from "react-icons/si";
 import { Roboto } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -68,7 +68,7 @@ const StickyBar = async() => {
   const post: About[] = await aboutMySlef()
   return (
     <>
-      <div className=' block lg:hidden md:hidden absolute inset-2 top-[70px] -z-10'>
+      <div className=' block lg:hidden absolute inset-2 top-[70px] -z-10'>
       {post?.length > 0 && post?.map((post,i) => (
           <Image
           key={i}
@@ -80,7 +80,7 @@ const StickyBar = async() => {
         />
         ))}
       </div>
-      <div className=' flex flex-col lg:max-w-[184px] md:max-w-[184px] lg:gap-4 md:gap-2 pt-[72px] lg:pt-0 md:pt-0 pl-2 lg:pl-0'>
+      <div className=' flex flex-col lg:max-w-[184px] lg:gap-4 pt-[72px] md:pt-[56px] lg:pt-0 pl-2 lg:pl-0'>
         <div className=' flex flex-row justify-between items-end'>
         {/* admin image */}
         {post?.length > 0 && post?.map((post, i) => (
@@ -99,27 +99,26 @@ const StickyBar = async() => {
           </React.Fragment>
         ))}
         <Link href={'/Links'}>
-          <button aria-label='socials' className=' block lg:hidden md:hidden text-[10px] text-[#06030B] dark:text-white right-3 mb-6 px-[12px] py-[6px] border border-[#9A55F2] rounded-2xl top-[196px] focus:bg-purple-950 duration-300 ease-in-out mr-1'>get in touch</button>
+          <button aria-label='socials' className=' block lg:hidden text-[10px] text-[#06030B] dark:text-white right-3 mb-6 px-[12px] py-[6px] border border-[#9A55F2] rounded-2xl top-[196px] focus:bg-purple-950 duration-300 ease-in-out mr-1'>get in touch</button>
         </Link>
       </div>
 
-      <div>
+      <div className=''>
           <h2 className={`${robotoBold.className} font-semibold text-[18px] leading-5 dark:text-[#F2F3F3] text-[#494E52] duration-300 pt-2 lg:pt-0 md:pt-2`}>Sayantan Paul</h2>
-          
       </div>
         <a
-          className={`${robotoRegular.className} block lg:hidden md:hidden text-[#494E52] dark:text-[#C4C4C4] text-[12px] leading-5 underline`}
+          className={`${robotoRegular.className} block lg:hidden text-[#494E52] dark:text-[#C4C4C4] text-[13px] leading-5 underline pt-1`}
           href='mailto:iam.paulsayantan06@gmail.com'
             >iam.paulsayantan06@gmail.com</a>
         <div className=' flex flex-row items-center gap-1'>
-          <MdWorkHistory size={12} className=' block lg:hidden md:hidden text-[#494E52] dark:text-[#C4C4C4]' />
+          <SiWorkplace size={14} className=' block lg:hidden text-[#494E52] dark:text-[#C4C4C4]' />
           <div>
             {post?.length > 0 && post?.map((post,i) => (
-              <p className={`${robotoRegular.className} lg:text-[13px] md:text-[13px] text-[11.2px] text-[#494E52] dark:text-[#C4C4C4] leading-5 text-wrap duration-300 `} key={i}>{post.metadescription }</p>
+              <p className={`${robotoRegular.className} lg:text-[13px] md:text-[13px] text-[13px] text-[#494E52] dark:text-[#C4C4C4] leading-5 text-wrap duration-300 font-bold`} key={i}>{post.metadescription }</p>
             ))}
           </div>
         </div>
-        <div className='lg:flex lg:flex-col md:flex md:flex-col gap-[8px] hidden'>
+        <div className='lg:flex lg:flex-col gap-[8px] hidden'>
           {/* location and email */}
           <div className=' flex flex-row items-center gap-[4px]'>
             <HiLocationMarker size={14} />
