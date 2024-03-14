@@ -29,7 +29,7 @@ const AboutSection = async() => {
                 <Button
                     size='default'
                     variant='default'
-                    className=' flex-initial inline-flex px-4 lg:w-auto md:w-auto font-semibold  rounded-sm lg:my-2 my-4 w-full'>
+                    className=' flex-initial inline-flex px-4 lg:w-auto md:w-auto font-semibold dark:font-bold  rounded-sm lg:my-2 my-4 w-full'>
                     Download CV
                     <PiReadCvLogoBold size={20} className='ml-2 h-[16px] w-[16px]'/>
                 </Button>

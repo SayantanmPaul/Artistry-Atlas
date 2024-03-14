@@ -13,7 +13,7 @@ const NavLinks = [
     },
     {
         name: 'technologies',
-        route: '/'
+        route: '/technologies'
     },
     {
         name: 'blogs',
