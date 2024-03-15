@@ -5,16 +5,17 @@ const NavLinks = [
     },
     {
         name: 'projects',
-        route: '/'
+        route: '/projects'
     },
     {
         name: 'career',
-        route: '/'
+        route: '/career'
     },
     {
         name: 'technologies',
         route: '/technologies'
     },
+    // removing blogs route for temporary
     {
         name: 'blogs',
         route: '/'
