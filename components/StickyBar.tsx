@@ -75,7 +75,7 @@ const StickyBar = async() => {
           src={urlFor(post.bannerimage).url()}
           alt='bannerImage'
           width={500}
-          height={500}
+          height={200}
           className='rounded-xl p-[2px] border dark:border-[#413A6F] h-[122px] w-full object-cover border-[#FFFFFF] border-opacity-50 dark:border-opacity-40 mx-auto'
         />
         ))}

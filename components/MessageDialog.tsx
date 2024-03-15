@@ -16,12 +16,12 @@ import { toast } from 'sonner';
 const MessageDialog = () => {
 
     // from emailjs docs
-    const form = useRef<HTMLFormElement | undefined>();
+    const form = React.useRef<HTMLFormElement>(null);
     const SendEmail = (e: FormEvent) => {
     e.preventDefault();
         if (form.current) {
             if (!process.env.NEXT_PUBLIC_GMAIL_SERVICE_ID || !process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
-                throw new Error('Keys arent functional');
+                throw new Error('Keys arent functi  onal');
             }
             emailjs.sendForm(process.env.NEXT_PUBLIC_GMAIL_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, form.current, {
                 publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,

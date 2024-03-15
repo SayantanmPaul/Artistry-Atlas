@@ -60,7 +60,7 @@ const NavDropDown = () => {
         className='border border-[#C4C4C4] dark:border-[#14141D] border-opacity-30 rounded-full hover:border-opacity-90 hover:animate-spinonce duration-300 ease-in-out'>
           <FiCommand size={16} className=' lg:w-4 lg:h-4 w-[18px] h-[18px] lg:m-[11px] m-[8px]' />
       </button>
-        <div className={`absolute left-0 w-full max-w-[96%] md:max-w-[97.5%] inset-0 mx-auto ${isClicked===false ? 'top-16': '-top-[522px] md:-top-[640px]'} duration-1000 ease-[cubic-bezier(0.95,0.05,0.795,0.035)] h-[46vh] md:h-[42vh]`}>
+        <div className={`absolute left-0 w-full max-w-[96%] md:max-w-[97.5%] inset-0 mx-auto ${isClicked===false ? 'top-16': '-top-[522px] md:-top-[640px]'} duration-1000 ease-out-expo  h-[46vh] md:h-[42vh]`}>
           <div className=' p-[12px] flex flex-col gap-[4px] bg-[#F6E3FE]/70 dark:bg-[#1D1B25]/70 backdrop-blur-lg border dark:border-[#413A6F]/40 border-[#D0CADF] rounded-[8px] custom-blur'>
           {NavLinks.map((route_name, i) => (
             <Link href={`${route_name.route}`} key={route_name.name}>

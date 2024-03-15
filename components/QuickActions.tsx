@@ -89,9 +89,9 @@ const QuickActions = () => {
                     <div className=' flex flex-row gap-[8px] items-center'>
                         <p className={` ${interregular.className} text-[#AFAFAF] dark:text-[#8B8B8B] font-medium text-[14px] text-center align-middle leading-[22px]`}>Exit</p>
                         <AlertDialogCancel >
-                            <button
+                            <div
                                 aria-label='close'
-                                className={`${interbold.className} border dark:border-[#2F2F43] border-[#E5E5E5] text-[10px] text-[#404040] dark:text-[#FFFFFF] font-bold leading-[22px] px-[6px] rounded-[4px]`}>ESC</button>
+                                className={`${interbold.className} border dark:border-[#2F2F43] border-[#E5E5E5] text-[10px] text-[#404040] dark:text-[#FFFFFF] font-bold leading-[22px] px-[6px] rounded-[4px]`}>ESC</div>
                         </AlertDialogCancel>
                     </div>
                 </div>
