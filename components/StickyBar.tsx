@@ -5,7 +5,7 @@ import { client } from '@/sanity/lib/client';
 import { HiLocationMarker } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
 import { FaSquareXTwitter, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa6";
-import { SiWorkplace } from "react-icons/si";
+// import { SiWorkplace } from "react-icons/si";
 import { Roboto } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -107,14 +107,15 @@ const StickyBar = async() => {
           <h2 className={`${robotoBold.className} font-semibold text-[18px] leading-5 dark:text-[#F2F3F3] text-[#494E52] duration-300 pt-2 lg:pt-0 md:pt-2`}>Sayantan Paul</h2>
       </div>
         <a
-          className={`${robotoRegular.className} block lg:hidden text-[#494E52] dark:text-[#C4C4C4] text-[13px] leading-5 underline pt-1`}
+          className={`${robotoRegular.className} block lg:hidden text-[#494E52] dark:text-[#C4C4C4] text-[13px] leading-5 underline pt-[2px] lg:pt-0 `}
           href='mailto:iam.paulsayantan06@gmail.com'
-            >iam.paulsayantan06@gmail.com</a>
-        <div className=' flex flex-row items-center gap-1'>
-          <SiWorkplace size={14} className=' block lg:hidden text-[#494E52] dark:text-[#C4C4C4]' />
+        >iam.paulsayantan06@gmail.com
+        </a>
+        <div className=' flex flex-row items-center gap-1 pt-[1px] lg:pt-0 '>
+          {/* <SiWorkplace size={14} className=' block lg:hidden text-[#494E52] dark:text-[#C4C4C4]' /> */}
           <div>
             {post?.length > 0 && post?.map((post,i) => (
-              <p className={`${robotoRegular.className} lg:text-[13px] md:text-[13px] text-[13px] text-[#494E52] dark:text-[#C4C4C4] leading-5 text-wrap duration-300 font-bold`} key={i}>{post.metadescription }</p>
+              <p className={`${robotoRegular.className} lg:text-[13px] md:text-[13px] text-[12.5px] text-[#494E52] dark:text-[#C4C4C4] leading-5 text-wrap duration-300 font-bold`} key={i}>{post.metadescription }</p>
             ))}
           </div>
         </div>

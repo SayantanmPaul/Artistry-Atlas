@@ -1,5 +1,4 @@
 import React from 'react'
-import { Inter } from 'next/font/google'
 import { PortableText } from "@portabletext/react";
 import { About } from '@/types/about-type';
 import { aboutMySlef } from '@/sanity/sanity-queries';
@@ -9,7 +8,6 @@ import { PiReadCvLogoBold } from "react-icons/pi";
 import SectionHead from '@/components/SectionHead';
 import Link from 'next/link';
 
-const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({ subsets: ['latin'], weight: '400' })
 
 const AboutSection = async() => {
