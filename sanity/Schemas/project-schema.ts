@@ -27,6 +27,19 @@ const project = defineField({
             options: { source: "title" },
         },
         {
+            name: 'catagory',
+            title: "Project Catagory",
+            type: "string"
+        },
+        {
+            name: 'icon',
+            title: 'Icon',
+            type: 'image',
+            options: {
+                hotspot: true
+            }
+        },
+        {
             name: 'mockup',
             title: 'Mockup Image',
             type: 'image',
@@ -51,6 +64,18 @@ const project = defineField({
             name: "githubLink",
             title: "Github Link",
             type: "url",
+        },
+        {
+            name: "DescType",
+            title: "Case Study/ Description",
+            type: "string",
+            options: {
+                list: [
+                    {title: 'Case Study', value: 'casestudy'},
+                    {title: 'Description', value: 'desc'},
+                ],
+                layout: 'radio'
+            }
         },
         {
             name: "projectdemoLink",
@@ -84,14 +109,18 @@ const project = defineField({
             }
         },
         {
+            name: "isFeatured",
+            title: "Featured the project?",
+            type: "boolean",
+        },
+        {
             name: 'tools',
             title: 'Tools',
             type: "array",
             of: [
                 { type: 'string' }
             ]
-        }
-
+        },
     ]
 })
 
