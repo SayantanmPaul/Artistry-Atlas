@@ -6,19 +6,34 @@ import ProjectTab from '@/components/ProjectTab'
 import { Button } from '@/components/ui/button'
 import { FaChevronDown } from "react-icons/fa";
 import { Project } from '@/types/project-type'
+import Loading from '../(client)/projects/ProjectCompLoading'
 
 const ProjectsSection = () => {
-
+  
+  const [loading, setloading] = useState(true)
   const [data, setData] = useState<Project[]>([])
 
   useEffect(() => {
     const ProjectData = async () => {
       const ProjectListData = await projectList()
       setData(ProjectListData)
+      setloading(false)
     }
     ProjectData()
-  },[])
+  }, [])
   
+  if (loading) {
+    return (<>
+      <SectionHead title='Featured Projects' metadesc='' />
+      <div className=' grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 flex-wrap gap-[24px] pt-6'>
+        <Loading/>
+        <Loading/>
+        <Loading/>
+        <Loading/>
+      </div>
+    </>
+    )
+}
   return (
     <div className='lg:max-w-[786px] flex flex-col gap-[8px]'>
       <SectionHead title='Featured Projects' metadesc='' />
@@ -27,6 +42,7 @@ const ProjectsSection = () => {
           if (data.isFeatured == true) {
             return <ProjectTab data={data} key={data._id} />
           }
+          
         })}
       </div>
       <div className=' flex justify-end pt-3'>

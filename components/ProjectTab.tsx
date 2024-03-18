@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import { Project } from '@/types/project-type'
 import Image from 'next/image'
 import { Poppins, Roboto } from 'next/font/google'
@@ -12,7 +13,8 @@ const ProjectTab = ({
 }: {
         data: Project,
         isFeatured?: boolean
-}) => {
+    }) => {
+
     return (
     <span className='p-[2.1px] bg-[#7FEBEE] hover:bg-gradient-to-r hover:from-[#1798FF] hover:to-[#D65DFE] rounded-[7px] overflow-hidden cursor-pointer duration-300 ease-in-out'>
     <span className=' w-full relative rounded-[7px] group'>
