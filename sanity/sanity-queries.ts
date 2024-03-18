@@ -1,6 +1,8 @@
 import { About } from "@/types/about-type";
 import { client } from "./lib/client";
 import { Tool } from "@/types/tools-type";
+import { Project } from "@/types/project-type";
+
 //about myself data
 export const aboutMySlef = async():Promise<About[]>=> {
     const query = 
@@ -29,4 +31,21 @@ export const TechTools = async (): Promise<Tool[]> => {
         }`
     )
     return toolQuery
+}
+
+//projects data
+
+export const projectList = async(): Promise<Project[]>=> {
+    const projectQuery = await client.fetch(
+        `*[_type=='project'] | order(orderRank){
+            _id,
+            title,
+            metadescription,
+            "slug":slug.current,
+            "mockup": mockup.asset->url,
+            isFeatured,
+            catagory
+        }`
+    )
+    return projectQuery
 }

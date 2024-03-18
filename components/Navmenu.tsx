@@ -36,11 +36,11 @@ const Navmenu = () => {
                         <p className={`${poppins.className} bg-clip-text text-transparent inline-block bg-gradient-to-r dark:from-[#FFC729] dark:to-[#C84E00] dark:bg-gradient-to-r from-[#FC6584] to-[#0D25B9] font-black duration-300 ease-in-out`}>links</p>
                     </Link>
                 </div>
-                <div className='flex flex-row gap-4 items-center'>
+                <div className='flex flex-row lg:gap-0 gap-4 items-center'>
                     <Link href={'/linktree'}>
                         <p className={`${poppins.className} bg-clip-text text-transparent inline-block bg-gradient-to-r dark:from-[#FFC729] dark:to-[#C84E00] dark:bg-gradient-to-r from-[#FC6584] to-[#0D25B9] font-black text-sm duration-300 ease-in-out lg:hidden md:hidden`}>links</p>
                     </Link>
-                    <div className=' block lg:hidden md:hidden'>
+                    <div className=' block lg:hidden md:hidden z-20'>
                         <NavDropDown/>
                     </div>
                     <div className=' lg:block hidden md:block'>

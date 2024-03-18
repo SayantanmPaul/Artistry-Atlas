@@ -38,7 +38,7 @@ export default function RootLayout({
           </div>
           
             <main className="mx-auto max-w-full lg:max-w-[1018px] flex lg:flex-row flex-col lg:gap-16 gap-3 lg:pt-[64px] md:pt-[24px] pt-4 px-2 lg:px-0 md:px-4">  
-              <div className="">
+              <div className="min-w-[196px]">
                 <StickyBar />
               </div>
               <div className="px-2 lg:pl-0">
