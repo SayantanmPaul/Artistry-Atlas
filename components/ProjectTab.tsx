@@ -21,7 +21,7 @@ const ProjectTab = ({
         <div className='rounded-[6px] overflow-hidden w-full h-full'>
             <Image src={data.mockup} alt={data.title} width={376} height={260} className=' lg:w-[376px] lg:h-[260px] md:w-full md:h-[238px] w-full  h-[256px] object-cover  z-0 group-hover:scale-110 ease-in-out duration-300' />
         </div>
-        <div className='absolute top-0 z-10 w-full h-32 bg-gradient-to-b from-slate-900/50 overflow-hidden rounded-[5px]'>
+        <div className='absolute top-0 z-10 w-full h-32 bg-gradient-to-b from-slate-900/40 overflow-hidden rounded-[5px]'>
         </div>
         <div className='absolute top-[12px] left-[24px] z-10'>
             <p className={`${poppinsSemibold.className} text-white text-[12px] leading-[22px] `}>{ data.catagory}</p>

@@ -1,7 +1,7 @@
 import ProjectsSection from '@/app/sections/projects-section'
 import React from 'react'
 
-export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic'
 const Projects = () => {
   return (
     <div>

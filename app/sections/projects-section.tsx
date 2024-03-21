@@ -12,6 +12,7 @@ const ProjectsSection = () => {
   
   const [loading, setloading] = useState(true)
   const [data, setData] = useState<Project[]>([])
+  const [isView, setisView] = useState(false)
 
   useEffect(() => {
     const ProjectData = async () => {
@@ -39,7 +40,7 @@ const ProjectsSection = () => {
       <SectionHead title='Featured Projects' metadesc='' />
       <div className=' grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 flex-wrap gap-[24px] pt-6'>
         {data.map((data) => {
-          if (data.isFeatured == true) {
+          if (data.isFeatured || isView) {
             return <ProjectTab data={data} key={data._id} />
           }
           
@@ -47,8 +48,10 @@ const ProjectsSection = () => {
       </div>
       <div className=' flex justify-end pt-3'>
       <span className='inline-block'>
-        <Button size='default' className=' inline-flex flex-row gap-2 items-center group'>
-          <p className=' font-semibold text-[14px] leading-[27px]'>View All Projects</p>
+          <Button onClick={() => {
+            setisView(!isView)
+        }} size='default' className={`${isView? 'hidden':'inline-flex'}  flex-row gap-2 items-center group `}>
+            <p className=' font-semibold text-[14px] leading-[27px]'>View All Projects</p>
           <FaChevronDown size={16} className=' w-[12px] h-[12px] -rotate-90 group-hover:rotate-0 duration-300 ease-in-out'/>
         </Button>
       </span>
