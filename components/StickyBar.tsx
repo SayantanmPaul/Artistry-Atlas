@@ -91,7 +91,7 @@ const StickyBar = async() => {
                 alt='author'
                 width={500}
                 height={500}
-                loading='lazy'
+                priority
                 className=' rounded-full select-none overflow-hidden lg:w-[175px] md:w-[124px] md:h-[124px] w-[104px] lg:h-[175px] h-[104px] lg:p-[4px] p-[2px] border-[1.5px] border-[#FC00FF]'
               />
               

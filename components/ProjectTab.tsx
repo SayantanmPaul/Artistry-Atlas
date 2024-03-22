@@ -1,25 +1,34 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Project } from '@/types/project-type'
 import Image from 'next/image'
 import { Poppins, Roboto } from 'next/font/google'
 import { ImArrowUpRight2 } from "react-icons/im";
+import Link from 'next/link'
 
 const poppinsSemibold = Poppins({ subsets: ['latin'], weight: '500' })
 const robotoBold = Roboto({ subsets: ['latin'], weight: '500' })
 
 const ProjectTab = ({
-    data, isFeatured
+    data
 }: {
         data: Project,
         isFeatured?: boolean
     }) => {
 
     return (
-    <span className='p-[2.1px] bg-[#7FEBEE] hover:bg-gradient-to-r hover:from-[#1798FF] hover:to-[#D65DFE] rounded-[7px] overflow-hidden cursor-pointer duration-300 ease-in-out'>
+        <span className='p-[2.1px] bg-[#7FEBEE] hover:bg-gradient-to-r hover:from-[#1798FF] hover:to-[#D65DFE] rounded-[7px] overflow-hidden cursor-pointer duration-300 ease-in-out'>
+    <Link href={`/projects/${data.slug}`}>
     <span className=' w-full relative rounded-[7px] group'>
         <div className='rounded-[6px] overflow-hidden w-full h-full'>
-            <Image src={data.mockup} alt={data.title} width={376} height={260} className=' lg:w-[376px] lg:h-[260px] md:w-full md:h-[238px] w-full  h-[256px] object-cover  z-0 group-hover:scale-110 ease-in-out duration-300' />
+            <Image
+                src={data.mockup}
+                alt={data.title}
+                width={1080}
+                height={720}
+                style={{width: '376px', height: '260px'}}
+                priority
+                className=' lg:w-[376px] lg:h-[260px] md:w-full md:h-[238px] w-full  h-[256px] object-cover  z-0 group-hover:scale-110 ease-in-out duration-300' />
         </div>
         <div className='absolute top-0 z-10 w-full h-32 bg-gradient-to-b from-slate-900/40 overflow-hidden rounded-[5px]'>
         </div>
@@ -36,7 +45,8 @@ const ProjectTab = ({
             </div>
         </div>
     </span>
-    </span>
+</Link>
+</span>
   )
 }
 

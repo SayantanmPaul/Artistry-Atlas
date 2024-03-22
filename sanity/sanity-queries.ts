@@ -44,8 +44,34 @@ export const projectList = async(): Promise<Project[]>=> {
             "slug":slug.current,
             "mockup": mockup.asset->url,
             isFeatured,
-            catagory
+            catagory,
+            "logo":icon.asset->url
         }`
     )
     return projectQuery
+}
+
+//project's detailed information
+
+export const projectDetails = async(slug:string): Promise<Project>=> {
+    const projecDatatQuery = await client.fetch(
+        `*[_type=='project' && slug.current == $slug][0]{
+            _id,
+            title,
+            metadescription,
+            "slug":slug.current,
+            "mockup": mockup.asset->url,
+            isFeatured,
+            catagory,
+            "carousleImages": bannerimages[].asset->url,
+            githubLink,
+            projectdemoLink,
+            DescType,
+            casestudy,
+            projectstatus,
+            tools[]
+        }`,
+        { slug: slug },
+    )
+    return projecDatatQuery
 }
