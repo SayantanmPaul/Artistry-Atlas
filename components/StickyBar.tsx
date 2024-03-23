@@ -9,7 +9,8 @@ import { FaSquareXTwitter, FaLinkedin, FaGithub, FaInstagram } from "react-icons
 import { Roboto } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
-import ImageUrlBuilder from '@sanity/image-url';
+import myself from '../public/assets/myself/img_0672.png'
+import banner from '../public/assets/myself/mobilebanner.png'
 
 const robotoBold = Roboto({
   weight: '700',
@@ -57,47 +58,35 @@ const SocialsLogo:{[key: string]: React.ElementType} = {
   FaInstagram: FaInstagram
 }
 
-//sanity image url builder
-const builder = ImageUrlBuilder(client)
-
-function urlFor(source:string) {
-  return builder.image(source)
-}
 
 const StickyBar = async() => {
-  const post: About[] = await aboutMySlef()
   return (
     <>
       <div className=' block lg:hidden absolute inset-2 top-[70px] -z-10'>
-      {post?.length > 0 && post?.map((post,i) => (
           <Image
-          key={i}
-          src={urlFor(post.bannerimage).url()}
+          src={banner}
           alt='bannerImage'
           width={500}
           height={200}
           className='rounded-xl p-[2px] border dark:border-[#413A6F] h-[122px] w-full object-cover border-[#FFFFFF] border-opacity-50 dark:border-opacity-40 mx-auto'
         />
-        ))}
       </div>
       <div className=' flex flex-col lg:max-w-[184px] lg:gap-4 pt-[72px] md:pt-[56px] lg:pt-0 pl-2 lg:pl-0'>
         <div className=' flex flex-row justify-between items-end'>
         {/* admin image */}
-        {post?.length > 0 && post?.map((post, i) => (
-          <React.Fragment key={i}>
+          <React.Fragment>
             <div className=' flex flex-row justify-between'>
               <Image
-                src={urlFor(post.adminimage).url()}
-                alt='author'
+                src={myself}
+                alt='Sayantan Paul'
                 width={500}
                 height={500}
                 priority
                 className=' rounded-full select-none overflow-hidden lg:w-[175px] md:w-[124px] md:h-[124px] w-[104px] lg:h-[175px] h-[104px] lg:p-[4px] p-[2px] border-[1.5px] border-[#FC00FF]'
               />
-              
-            </div>  
+            </div>
           </React.Fragment>
-        ))}
+
         <Link href={'/linktree'}>
           <button aria-label='socials' className=' block lg:hidden text-[10px] text-[#06030B] dark:text-white right-3 mb-6 px-[12px] py-[6px] border border-[#9A55F2] rounded-2xl top-[196px] focus:bg-purple-950 duration-300 ease-in-out mr-1'>get in touch</button>
         </Link>
@@ -114,9 +103,7 @@ const StickyBar = async() => {
         <div className=' flex flex-row items-center gap-1 pt-[1px] lg:pt-0 '>
           {/* <SiWorkplace size={14} className=' block lg:hidden text-[#494E52] dark:text-[#C4C4C4]' /> */}
           <div>
-            {post?.length > 0 && post?.map((post,i) => (
-              <p className={`${robotoRegular.className} lg:text-[13px] md:text-[13px] text-[12.5px] text-[#494E52] dark:text-[#C4C4C4] leading-5 text-wrap duration-300 font-bold`} key={i}>{post.metadescription }</p>
-            ))}
+              <p className={`${robotoRegular.className} lg:text-[13px] md:text-[13px] text-[12.5px] text-[#494E52] dark:text-[#C4C4C4] leading-5 text-wrap duration-300 font-bold`} >Software Developer | Machine Learning | An Part-Time Artist :)</p>
           </div>
         </div>
         <div className='lg:flex lg:flex-col gap-[8px] hidden'>
