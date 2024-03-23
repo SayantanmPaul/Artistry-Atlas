@@ -30,8 +30,15 @@ const about = {
         }),
         
         defineField({
-            name: 'bio',
-            title: 'Bio',
+            name: 'bio_desktopview',
+            title: 'Bio for Desktop',
+            type: 'array',
+            of: [{type: 'block'}]
+        }),
+        
+        defineField({
+            name: 'bio_mobileview',
+            title: 'Bio for Mobile',
             type: 'array',
             of: [{type: 'block'}]
         }),

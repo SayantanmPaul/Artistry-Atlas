@@ -5,7 +5,8 @@ export type About = {
     adminimage:string,
     bannerimage: string,
     metadescription: string,
-    bio: PortableTextBlock[],
+    bio_desktopview: PortableTextBlock[],
+    bio_mobileview: PortableTextBlock[],
     slug: string
 }
 

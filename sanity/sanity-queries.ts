@@ -4,15 +4,18 @@ import { Tool } from "@/types/tools-type";
 import { Project } from "@/types/project-type";
 
 //about myself data
-export const aboutMySlef = async():Promise<About[]>=> {
+export const aboutMySlef = async():Promise<About>=> {
     const query = 
-        `*[_type=='about']{
+        `*[_type=='about'][0]{
+            _id,
             adminimage,
             bannerimage,
             metadescription,
-            bio
+            bio_desktopview,
+            bio_mobileview,
+            slug,
+
         }`
-    
     const getAdminData=await client.fetch(query)
     return getAdminData
 }
