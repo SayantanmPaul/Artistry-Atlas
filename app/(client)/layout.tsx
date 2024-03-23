@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Provider } from "../utils/provider"
 import "./globals.css";
 import Navmenu from "@/components/Navmenu";
@@ -8,7 +7,6 @@ import Image from "next/image";
 import StickyBar from "@/components/StickyBar";
 import { Toaster } from "sonner";
 
-const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Sayantan Paul | Developer ",
   description: "Sayantan Paul is a passionate Cross Platform Developer focusing on continuous learning and solving real-world challenges.",
@@ -24,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning suppressContentEditableWarning className={`${inter.className} bg-[#FFFFFF] dark:bg-[#0F0B17] text-[#22242C] selection:bg-[#0F0B17] dark:selection:text-[#06030B] selection:text-white dark:selection:bg-[#F3F3F3] dark:text-[#F2F3F3] duration-300 transition-all ease-in-out`}>
+      <body suppressHydrationWarning suppressContentEditableWarning className={`bg-[#FFFFFF] dark:bg-[#0F0B17] text-[#22242C] selection:bg-[#0F0B17] dark:selection:text-[#06030B] selection:text-white dark:selection:bg-[#F3F3F3] dark:text-[#F2F3F3] duration-300 transition-all ease-in-out`}>
         <section>
         <Image src={BgGradient} priority alt="Bg_gradient" width={720} height={410} className="absolute lg:w-screen md:w-[1000px] w-[1000px]  inset-0 lg:mx-auto md:mx-auto lg:-top-[732px] md:-top-[264px] -top-[172px] lg:opacity-70 opacity-50 -z-30 lg:max-w-[1440px] overflow-hidden select-none h-f" />
 

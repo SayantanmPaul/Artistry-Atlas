@@ -2,7 +2,7 @@ import React from 'react'
 import { projectDetails } from '@/sanity/sanity-queries'
 import ProjectDescSection from '@/app/sections/projectdesc-section';
 
-export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic'
 
 type Props = {
   params: { project: string };

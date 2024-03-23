@@ -9,7 +9,7 @@ const TechStackSection = async () => {
   
   return (
     <div className='max-w-[775px] flex flex-col gap-[16px] overflow-hidden'>
-      <SectionHead title='Tech Stack' metadesc='These are my go-to technologies and skills' />
+      <SectionHead title='Tech Stack & skills' />
       <div className=' flex flex-col w-full lg:gap-[16px] md:gap-[16px] gap-[8px] flex-wrap'> 
       {categories.map((i) => (
           <div key={i} className='flex flex-row lg:gap-[16px] md:gap-[16px] gap-[8px] flex-wrap'>

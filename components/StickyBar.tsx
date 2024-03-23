@@ -67,7 +67,7 @@ const StickyBar = async() => {
           src={banner}
           alt='bannerImage'
           width={500}
-          height={200}
+          height={122}
           className='rounded-xl p-[2px] border dark:border-[#413A6F] h-[122px] w-full object-cover border-[#FFFFFF] border-opacity-50 dark:border-opacity-40 mx-auto'
         />
       </div>
@@ -79,15 +79,15 @@ const StickyBar = async() => {
               <Image
                 src={myself}
                 alt='Sayantan Paul'
-                width={500}
-                height={500}
+                width={175}
+                height={175}
                 priority
                 className=' rounded-full select-none overflow-hidden lg:w-[175px] md:w-[124px] md:h-[124px] w-[104px] lg:h-[175px] h-[104px] lg:p-[4px] p-[2px] border-[1.5px] border-[#FC00FF]'
               />
             </div>
           </React.Fragment>
 
-        <Link href={'/linktree'}>
+        <Link aria-label='linktree' href={'/linktree'}>
           <button aria-label='socials' className=' block lg:hidden text-[10px] text-[#06030B] dark:text-white right-3 mb-6 px-[12px] py-[6px] border border-[#9A55F2] rounded-2xl top-[196px] focus:bg-purple-950 duration-300 ease-in-out mr-1'>get in touch</button>
         </Link>
       </div>
@@ -96,6 +96,7 @@ const StickyBar = async() => {
           <h2 className={`${robotoBold.className} font-semibold text-[18px] leading-5 dark:text-[#F2F3F3] text-[#494E52] duration-300 pt-2 lg:pt-0 md:pt-2`}>Sayantan Paul</h2>
       </div>
         <a
+          aria-label='email id'
           className={`${robotoRegular.className} block lg:hidden text-[#494E52] dark:text-[#C4C4C4] text-[13px] leading-5 underline pt-[2px] lg:pt-0 `}
           href='mailto:iam.paulsayantan06@gmail.com'
         >iam.paulsayantan06@gmail.com
@@ -122,7 +123,7 @@ const StickyBar = async() => {
           {featuredSocials && SocialsLogo && featuredSocials.map((data, i) => {
             const IconComp= SocialsLogo[data.logo]
             return IconComp ? (
-              <Link href={data.link} key={i} passHref legacyBehavior>
+              <Link aria-label={data.name} href={data.link} key={i} passHref legacyBehavior>
                 <a target="_blank" rel="noref">
                 <div
                   key={i}
