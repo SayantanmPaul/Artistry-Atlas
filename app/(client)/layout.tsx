@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import { Provider } from "../utils/provider"
 import "./globals.css";
 import Navmenu from "@/components/Navmenu";
@@ -7,13 +7,10 @@ import Image from "next/image";
 import StickyBar from "@/components/StickyBar";
 import { Toaster } from "sonner";
 
-export const metadata: Metadata = {
+export const metadata:Metadata={
   title: "Sayantan Paul | Developer ",
   description: "Sayantan Paul is a passionate Cross Platform Developer focusing on continuous learning and solving real-world challenges.",
-  icons: {
-    icon: './favicon.ico'
-  }
-};  
+}
 
 export default function RootLayout({
   children,

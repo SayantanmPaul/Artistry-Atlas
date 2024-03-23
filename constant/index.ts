@@ -16,10 +16,10 @@ const NavLinks = [
         route: '/technologies'
     },
     // removing blogs route for temporary
-    {
-        name: 'blogs',
-        route: '/'
-    },
+    // {
+    //     name: 'blogs',
+    //     route: '/'
+    // },
 ]
 
 export default NavLinks
