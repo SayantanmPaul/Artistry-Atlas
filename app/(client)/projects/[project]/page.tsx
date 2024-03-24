@@ -2,6 +2,7 @@ import React from 'react'
 import { projectDetails } from '@/sanity/sanity-queries'
 import ProjectDescSection from '@/app/sections/projectdesc-section';
 import { Metadata, ResolvingMetadata } from 'next';
+import StickyBar from '@/components/StickyBar';
 // export const dynamic = 'force-dynamic'
 
 type Props = {
@@ -23,10 +24,14 @@ const Project = async ({ params }: Props) => {
   const projectData = await projectDetails(slug)
   
   return (
+    <>
+    <div className="min-w-[196px]">
+      <StickyBar />
+    </div>
     <div className='lg:max-w-[786px] w-full flex flex-col gap-[8px]'>
       <ProjectDescSection data={projectData} />
-      
     </div>
+    </>
   )
 }
 
