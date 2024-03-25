@@ -5,6 +5,7 @@ import Navmenu from "@/components/Navmenu";
 import BgGradient from '@/public/assets/glow-vector.svg'
 import Image from "next/image";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata:Metadata={
   title: "Sayantan Paul | Developer ",
@@ -42,6 +43,7 @@ export default function RootLayout({
         </div>
         </section>
       </body>
+      <Analytics/>
     </html>
   );
 }
