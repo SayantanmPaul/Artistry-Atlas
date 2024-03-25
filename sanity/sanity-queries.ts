@@ -2,6 +2,7 @@ import { About } from "@/types/about-type";
 import { client } from "./lib/client";
 import { Tool } from "@/types/tools-type";
 import { Project } from "@/types/project-type";
+import { Links } from "@/types/link-type";
 
 //about myself data
 export const aboutMySlef = async():Promise<About>=> {
@@ -77,4 +78,19 @@ export const projectDetails = async(slug:string): Promise<Project>=> {
         { slug: slug },
     )
     return projecDatatQuery
+}
+
+//other links data
+
+export const linkList = async(): Promise<Links[]>=> {
+    const projectQuery = await client.fetch(
+        `*[_type=='links'] | order(orderRank){
+            _id,
+            title,
+            type,
+            url,
+            "logo":logo.asset->url
+        }`
+    )
+    return projectQuery
 }

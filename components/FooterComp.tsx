@@ -5,9 +5,8 @@ const Ibarra = Ibarra_Real_Nova({ weight: '500', style: 'normal', subsets: ['lat
 
 const FooterComp = () => {
   return (
-    <div className={` text-[12px] dark:text-[#C4C4C4] text-[#494E52] text-center inline-flex flex-row gap-2 justify-center w-full`}>
-        <p>Designed and Handcrafted by Sayantan Paul</p>
-        <p>© 2024, All rights reserved.</p>
+    <div className={` text-[12px] dark:text-[#C4C4C4] text-[#494E52] text-center inline-flex flex-row gap-1 justify-center w-full`}>
+        <p>Designed and Handcrafted by Sayantan Paul ©2024, made with Sanity CMS and Shadcn/ui</p>
     </div>
   )
 }

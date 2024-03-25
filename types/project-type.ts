@@ -15,5 +15,6 @@ export type Project={
     DescType: string,
     casestudy: PortableTextBlock[],
     projectstatus: string,
-    tools: string[]
+    tools: string[],
+    logo: string
 }
