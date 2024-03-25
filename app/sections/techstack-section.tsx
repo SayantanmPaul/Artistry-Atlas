@@ -21,6 +21,7 @@ const TechStackSection = async () => {
           </div>
         ))}
       </div>
+      <div className='py-4'></div>      
     </div>
   )
 }

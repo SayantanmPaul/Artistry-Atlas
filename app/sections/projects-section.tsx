@@ -54,6 +54,7 @@ const ProjectsSection = () => {
           <FaChevronDown size={16} className=' w-[12px] h-[12px] -rotate-90 group-hover:rotate-0 duration-300 ease-in-out'/>
         </Button>
       </span>
+      <div className='py-4'></div>      
       </div>
   )
 } 

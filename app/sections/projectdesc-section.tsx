@@ -71,6 +71,7 @@ const ProjectDescSection = ({ data }: { data: Project }) => {
           </span>  
       </div>
       </div>
+      <div className='py-4'></div>      
     </div>
   )
 }

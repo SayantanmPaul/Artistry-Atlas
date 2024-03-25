@@ -9,7 +9,7 @@ const LinkTree = () => {
       <div className='max-w-[540px] h-full pb-6'>
         <LinktreeSection />
       </div>
-      <footer className='py-4 lg:max-w-[540px] max-w-[340px] mx-auto w-full'> 
+      <footer className='py-4 lg:max-w-[540px] max-w-full mx-auto w-full'> 
         <FooterComp/>
       </footer>
     </div>

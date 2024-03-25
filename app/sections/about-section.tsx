@@ -42,6 +42,7 @@ const AboutSection = async() => {
                 </a>
             </Link>
             </span>
+            <div className='py-4'></div>      
         </div>
     </>
 )}

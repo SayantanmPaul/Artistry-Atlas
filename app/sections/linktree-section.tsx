@@ -72,7 +72,7 @@ const LinktreeSection = async() => {
         <p className={`${raleway.className} tracking-[6px] dark:text-white/60 uppercase text-[14px] text-[#191825]/60 duration-300 ease-in-out text-center w-full`}>Featured Projects</p>
         {featureProjectList.map((project, i) => {
           if (project.isFeatured == true) return (
-            <span key={i} className='w-[356px]'>
+            <span key={i} className='lg:w-[356px] md:w-[356px] w-[324px]'>
               <Link href={`/projects/${project.slug}`}>
                 <div className='dark:bg-[#413A6F]/20 bg-[#D0CADF] hover:bg-gradient-to-r hover:from-[#1798FF] hover:to-[#D65DFE] p-[1px] rounded-[6px] group'>
                   <div className='dark:bg-[#0F0B17] bg-[#FFFFFF] rounded-[5px]'>
@@ -94,7 +94,7 @@ const LinktreeSection = async() => {
       <p className={`${raleway.className} tracking-[6px] dark:text-white/60 uppercase text-[14px] text-[#191825]/60 duration-300 ease-in-out text-center w-full`}>other socials</p>
         {otherLinklist.map((link, i) => {
           if (link.type == 'socialLink') return (
-            <span key={i} className='w-[356px]'>
+            <span key={i} className='lg:w-[356px] md:w-[356px] w-[324px]'>
               <Link href={link.url}>
                 <div className='dark:bg-[#413A6F]/20 bg-[#D0CADF] hover:bg-gradient-to-r hover:from-[#1798FF] hover:to-[#D65DFE] p-[1px] rounded-[6px] group'>
                   <div className='dark:bg-[#0F0B17] bg-[#FFFFFF] rounded-[5px]'>
