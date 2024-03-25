@@ -6,6 +6,7 @@ import BgGradient from '@/public/assets/glow-vector.svg'
 import Image from "next/image";
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/react"
+import TopLoadingBar from "@/components/TopLoadingBar";
 
 export const metadata:Metadata={
   title: "Sayantan Paul | Developer ",
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning suppressContentEditableWarning className={`bg-[#FFFFFF] dark:bg-[#0F0B17] text-[#22242C] selection:bg-[#0F0B17] dark:selection:text-[#06030B] selection:text-white dark:selection:bg-[#F3F3F3] dark:text-[#F2F3F3] duration-300 transition-all ease-in-out`}>
+        <TopLoadingBar/>
         <section>
         <div className="">
         <Image src={BgGradient} priority alt="Bg_gradient" width={720} height={410} className="absolute lg:w-screen md:w-[1000px] w-[1000px]  inset-0 lg:mx-auto md:mx-auto lg:-top-[732px] md:-top-[264px] -top-[172px] lg:opacity-70 opacity-50 -z-30 lg:max-w-[1440px] overflow-hidden select-none h-f" />
