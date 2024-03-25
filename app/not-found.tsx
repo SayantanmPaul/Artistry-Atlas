@@ -6,8 +6,8 @@ import { Button } from '@/components/ui/button'
 
 const NotFound = () => {
   return (
-    <div className='flex flex-col w-full items-center gap-[36px] h-[70vh] justify-center duration-300 ease-in-out'>
-        <Image src={error} alt='404' width={340} height={340} className='lg:w-[340px] w-[186px]' />
+    <div className='flex flex-col w-full items-center gap-[36px] h-[76vh] justify-center duration-300 ease-in-out'>
+        <Image src={error} alt='404' width={340} height={340} className='lg:w-[340px] w-[236px]' />
         <Link href={'/'}>
             <Button className=' bg-rose-600 rounded-none font-bold'>Go back to Home</Button>
         </Link>
