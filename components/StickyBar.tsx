@@ -1,11 +1,7 @@
 import React from 'react'
-import { aboutMySlef } from '@/sanity/sanity-queries'
-import { About } from '@/types/about-type';
-import { client } from '@/sanity/lib/client';
 import { HiLocationMarker } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
 import { FaSquareXTwitter, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa6";
-// import { SiWorkplace } from "react-icons/si";
 import { Roboto } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -49,6 +45,7 @@ const featuredSocials = [
     color: 'text-[#FC00FF]'
   },
 ]
+
 //socials logos
 const SocialsLogo:{[key: string]: React.ElementType} = {
   MdEmail: MdEmail,
