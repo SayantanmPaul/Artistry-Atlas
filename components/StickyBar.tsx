@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import myself from '../public/assets/myself/img_0672.png'
 import banner from '../public/assets/myself/mobilebanner.png'
+import { Button } from './ui/button';
 
 const robotoBold = Roboto({
   weight: '700',
@@ -68,7 +69,7 @@ const StickyBar = async() => {
           className='rounded-xl p-[2px] border dark:border-[#413A6F] h-[122px] w-full object-cover border-[#FFFFFF] border-opacity-50 dark:border-opacity-40 mx-auto'
         />
       </div>
-      <div className=' flex flex-col lg:max-w-[184px] lg:gap-4 pt-[72px] md:pt-[56px] lg:pt-0 pl-2 lg:pl-0'>
+      <div className=' flex flex-col lg:max-w-[184px] lg:gap-4 pt-[72px] md:pt-[56px] lg:pt-0'>
         <div className=' flex flex-row justify-between items-end'>
         {/* admin image */}
           <React.Fragment>
@@ -79,14 +80,12 @@ const StickyBar = async() => {
                 width={175}
                 height={175}
                 priority
-                className=' rounded-full select-none overflow-hidden lg:w-[175px] md:w-[124px] md:h-[124px] w-[104px] lg:h-[175px] h-[104px] lg:p-[4px] p-[2px] border-[1.5px] border-[#FC00FF]'
+                className=' rounded-full select-none overflow-hidden lg:w-[175px] md:w-[124px] md:h-[124px] w-[108px] lg:h-[175px] h-[108px] lg:p-[4px] p-[2px] border-[1.5px] dark:border-[#00C6FB] border-[#005BEA] dark:bg-[#0F0B17]/80 bg-[#F2F3F3]/90'
               />
             </div>
           </React.Fragment>
 
-        <Link aria-label='linktree' href={'/linktree'}>
-          <button aria-label='socials' className=' block lg:hidden text-[10px] text-[#06030B] dark:text-white right-3 mb-6 px-[12px] py-[6px] border border-[#9A55F2] rounded-2xl top-[196px] focus:bg-purple-950 duration-300 ease-in-out mr-1'>get in touch</button>
-        </Link>
+        
       </div>
 
       <div className=''>
