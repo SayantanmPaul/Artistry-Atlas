@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import myself from '@/public/assets/myself/img_0672.png'
-import { Ibarra_Real_Nova, Poppins, Raleway,Roboto } from 'next/font/google'
+import { Ibarra_Real_Nova, Poppins, Raleway } from 'next/font/google'
 import { linkList } from '@/sanity/sanity-queries'
 import { Links } from '@/types/link-type'
 import { Project } from '@/types/project-type'
@@ -22,7 +22,6 @@ import {
 const Ibarra= Ibarra_Real_Nova({weight:'600', style: 'normal', subsets: ['latin']})
 const poppins = Poppins({ weight: '400', style: 'normal', subsets: ['latin'] })
 const raleway= Raleway({ weight: '700', style: 'normal', subsets: ['latin'] })
-const roboto = Roboto({ subsets: ['latin'], weight: '400' })
 
 
 const SocialsLogo:{[key: string]: React.ElementType} = {
@@ -41,12 +40,18 @@ const LinktreeSection = async() => {
     <div className='flex flex-col lg:gap-[36px] gap-[28px] items-center'>
       <div className='flex flex-col lg:gap-[16px] gap-[12px] items-center'>
         <div className='border border-[#005BEA] rounded-full p-1'>
-        <Image src={myself} alt='sayantan paul' width={250} height={250} className='w-[112px] h-[112px] rounded-full overflow-hidden'/>
+          <Image
+            src={myself}
+            alt='sayantan paul'
+            width={250}
+            height={250}
+            priority
+            className='lg:w-[112px] lg:h-[112px] w-[102px] h-[102px] rounded-full overflow-hidden' />
         </div>
         <h2 className={`${Ibarra.className} text-[24px] leading-[22px] font-bold`}>Sayantan paul</h2>
         <p className={`${poppins.className} text-[12px] leading-[22px] font-normal max-w-[264px] text-center text-[#494E52] dark:text-[#C4C4C4]`}>Software Developer | Machine Learning | An Part-Time Artist :)</p>
       <div className='flex flex-row gap-[24px]'>
-        {mainSocials&& SocialsLogo && mainSocials.map((link,i)=>{
+        {SocialsLogo && mainSocials.map((link,i)=>{
           const IconComp = SocialsLogo[link.logo]
           return IconComp ? (
             <TooltipProvider key={i}>

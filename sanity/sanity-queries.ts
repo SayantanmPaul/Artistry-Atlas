@@ -92,11 +92,10 @@ export const linkList = async(): Promise<Links[]>=> {
             "logo":logo.asset->url
         }`
     )
-    // await ConstWait(5000)
     return projectQuery
 }
 
-// fetch delay testing purpose
+// // fetch delay testing purpose
 // export async function ConstWait(ms: number) {
 //     return new Promise(res=>setTimeout(res,ms))
 // }
