@@ -35,7 +35,7 @@ export default function RootLayout({
               <Navmenu />
             </header>
           </div>
-            <main className="mx-auto max-w-full lg:max-w-[1018px] flex lg:flex-row flex-col lg:gap-16 gap-3 lg:pt-[64px] md:pt-[24px] pt-4 px-4 lg:px-0 md:px-4 lg:pl-0">  
+            <main className="">  
               {children}
             </main>
         </Provider>
