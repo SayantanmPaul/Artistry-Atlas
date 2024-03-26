@@ -41,9 +41,10 @@ const ProjectsSection = () => {
       <div className=' grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 flex-wrap lg:gap-[24px] gap-[16px] lg:pt-4 pt-[8px]'>
         {data.map((data) => {
           if (data.isFeatured || isView) {
-            return <ProjectTab data={data} key={data._id} />
+            return (
+                <ProjectTab data={data} key={data._id} />
+            )
           }
-          
         })}
       </div>
       <span className='inline-flex justify-end w-full pt-3'>
