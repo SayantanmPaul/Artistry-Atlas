@@ -9,6 +9,7 @@ import { BsTwitterX } from "react-icons/bs";
 import { FaMedium } from "react-icons/fa6";
 import ThemeSwitch from './ThemeSwitch';
 import { useTheme } from 'next-themes'
+import { usePathname } from 'next/navigation';
 
 const media = [
   {
@@ -29,11 +30,12 @@ const media = [
 ]
 
 const NavDropDown = () => {
-  const [active, setActive] = useState('home')
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [isClicked, setisClicked] = useState(true)
 
+  const path = usePathname()
+  
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -48,7 +50,6 @@ const NavDropDown = () => {
 
   //active route function
   function handleActiveState(route:string) {
-    setActive(route)
     setisClicked(!isClicked)
   }
 
@@ -64,11 +65,11 @@ const NavDropDown = () => {
           <div className=' p-[12px] flex flex-col gap-[4px] bg-[#F6E3FE]/70 dark:bg-[#1D1B25]/70 backdrop-blur-lg border dark:border-[#413A6F]/40 border-[#D0CADF] rounded-[8px] custom-blur'>
           {NavLinks.map((route_name, i) => (
             <Link href={`${route_name.route}`} key={route_name.name}>
-              <div onClick={() => handleActiveState(`${route_name.name}`)} className={`nav_font  dark:text-[#F2F3F3] text-[#404040] leading-6 py-[3px]  text-[14px] flex flex-row justify-between ${active === route_name.name ? 'active duration-100 dark:text-[#F3F3F3] bg-[#413A6F]/20 dark:bg-white/10 px-[10px] rounded-[4px] dark:font-semibold font-semibold py-[4px]' : 'dark:font-medium font-semibold px-[10px] py-[4px] duration-300 ease-in-out'}`}>
+              <div onClick={() => handleActiveState(`${route_name.name}`)} className={`nav_font dark:text-[#F2F3F3] text-[#404040] leading-6 py-[3px]  text-[14px] flex flex-row justify-between ${route_name.route===path? "active duration-100 dark:text-[#F3F3F3] bg-[#413A6F]/20 dark:bg-white/10 px-[10px] rounded-[4px] dark:font-semibold font-semibold py-[4px]" : 'dark:font-medium font-semibold px-[10px] py-[4px] duration-300 ease-in-out'}`}>
                 <p>
                   {route_name.name}
                 </p>
-                {active === route_name.name ? <div className='flex flex-row items-center gap-1 text-[#404040]/60 dark:text-[#F2F3F3]/40 duration-300 ease-in-out'>
+                {route_name.route===path? <div className='flex flex-row items-center gap-1 text-[#404040]/60 dark:text-[#F2F3F3]/40 duration-300 ease-in-out'>
                   <p className=' text-[12px]  font-medium'>current tab</p>
                   <FaChevronRight size={10} />
                 </div> : ''}

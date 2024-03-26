@@ -1,13 +1,14 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Poppins } from 'next/font/google'
 import NavLinks from '../constant/index'
 import logo from '../public/assets/letter-s (1) 1.svg'
 import NavDropDown from './NavDropDown'
-
 import QuickActions from './QuickActions'
+import { usePathname } from 'next/navigation'
+
 const poppins = Poppins({
     weight: '700',
     subsets: ['latin'],
@@ -15,13 +16,7 @@ const poppins = Poppins({
 })
 
 const Navmenu = () => {
-
-    const [active, setActive] = useState('home')
-
-    //active route function
-    function handleActiveState(route:string) {
-        setActive(route)
-    } 
+    const path = usePathname()
     return (
         <>
             <div className="mx-auto lg:max-w-[1050px] lg:max-h-[52px] justify-between items-center flex lg:px-[25px] px-[8px]  lg:py-2 py-[3px] bg-[#FFFFFF] bg-opacity-30 dark:bg-[#1D1B25] dark:bg-opacity-40 border dark:border-[#413A6F] border-[#FFFFFF] border-opacity-50 dark:border-opacity-40 rounded-[12px] duration-300 transition-all overflow-hidden">
@@ -29,7 +24,7 @@ const Navmenu = () => {
                 <div className=' lg:flex md:flex flex-row gap-6 font-medium lg:text-[16px] md:text-[12px] text-[12px] text-[#22242C] dark:text-[#C4C4C4] duration-300 hidden '>
                 {NavLinks.map((route_name, i) => (
                         <Link aria-label={route_name.name} href={`${route_name.route}`} key={route_name.name}>
-                            <p onClick={()=>handleActiveState(`${route_name.name}`)} className={`nav_font  ${active===route_name.name? 'active duration-100 dark:text-[#F3F3F3]': ''}`}>{ route_name.name}</p>
+                            <p className={`${route_name.route===path ? "font-bold duration-100 dark:text-[#F3F3F3]":''}`}>{ route_name.name}</p>
                         </Link>
                     ))}
                     <Link aria-label='linktree' href={'/linktree'}>
