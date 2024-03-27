@@ -7,7 +7,7 @@ import { ImArrowUpRight2 } from "react-icons/im";
 import Link from 'next/link'
 
 const poppinsSemibold = Poppins({ subsets: ['latin'], weight: '500' })
-const poppinsbold = Poppins({ subsets: ['latin'], weight: '500' })
+const poppinsbold = Poppins({ subsets: ['latin'], weight: '600' })
 const InterBold = Inter({ subsets: ['latin'], weight: '400' })
 
 const ProjectTab = ({

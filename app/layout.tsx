@@ -26,9 +26,8 @@ export default function RootLayout({
         <TopLoadingBar/>
         <section>
         <div className="">
-        <Image src={BgGradient} priority alt="Bg_gradient" width={720} height={410} className="absolute lg:w-screen md:w-[1000px] w-[1000px]  inset-0 lg:mx-auto md:mx-auto lg:-top-[732px] md:-top-[264px] -top-[172px] lg:opacity-70 opacity-50 -z-30 lg:max-w-[1440px] overflow-hidden select-none h-f" />
-
         <div className="fixed inset-0 -z-10 w-full bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] h-screen"></div>
+        <Image src={BgGradient} priority alt="Bg_gradient" width={1020} height={1020} className="absolute w-screen mx-auto inset-0 lg:-top-[732px] md:-top-[264px] -top-[172px] lg:opacity-70 opacity-50 -z-30 lg:max-w-[1440px] overflow-hidden select-none object-cover" />
         
         {/* next theme provider via util.tsx */}
         <Provider>
