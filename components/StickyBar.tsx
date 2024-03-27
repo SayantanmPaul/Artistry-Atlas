@@ -66,6 +66,7 @@ const StickyBar = async() => {
           alt='bannerImage'
           width={500}
           height={122}
+          priority
           className='rounded-xl p-[2px] border dark:border-[#413A6F] h-[122px] w-full object-cover border-[#FFFFFF] border-opacity-50 dark:border-opacity-40 mx-auto'
         />
       </div>
