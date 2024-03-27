@@ -69,7 +69,7 @@ const StickyBar = async() => {
           className='rounded-xl p-[2px] border dark:border-[#413A6F] h-[122px] w-full object-cover border-[#FFFFFF] border-opacity-50 dark:border-opacity-40 mx-auto'
         />
       </div>
-      <div className=' flex flex-col lg:max-w-[184px] lg:gap-4 pt-[72px] md:pt-[56px] lg:pt-0'>
+      <div className=' flex flex-col lg:max-w-[184px] lg:gap-4 pt-[56px] md:pt-[56px] lg:pt-0'>
         <div className=' flex flex-row justify-between items-end'>
         {/* admin image */}
           <React.Fragment>
