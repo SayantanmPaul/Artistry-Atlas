@@ -56,6 +56,9 @@ dependencies:
   framer-motion:
     specifier: ^11.0.20
     version: 11.0.20(react-dom@18.2.0)(react@18.2.0)
+  gsap:
+    specifier: ^3.12.5
+    version: 3.12.5
   moment:
     specifier: ^2.30.1
     version: 2.30.1
@@ -5986,6 +5989,10 @@ packages:
   /groq@3.35.2:
     resolution: {integrity: sha512-lh35TLq6KVYg7Sm7wE0UsZs/7BnlcUksx4wX+bdOU7vOl7WymMkrFqxyK1FhZWyxLvxsnItGGHjD5k9WooCy8Q==}
     engines: {node: '>=18'}
+    dev: false
+
+  /gsap@3.12.5:
+    resolution: {integrity: sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==}
     dev: false
 
   /gunzip-maybe@1.4.2:

@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/react"
 import TopLoadingBar from "@/components/TopLoadingBar";
+import Preloader from "@/components/Preloader";
 
 export const metadata:Metadata={
   title: "Sayantan Paul | Developer ",
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning suppressContentEditableWarning className={`bg-[#FFFFFF] dark:bg-[#0F0B17] text-[#22242C] selection:bg-[#0F0B17] dark:selection:text-[#06030B] selection:text-white dark:selection:bg-[#F3F3F3] dark:text-[#F2F3F3] duration-300 transition-all ease-in-out`}>
+        <Preloader/>
         <TopLoadingBar/>
         <section>
         <div className="">
