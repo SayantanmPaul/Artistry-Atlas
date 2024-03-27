@@ -18,9 +18,8 @@ const AboutSection = async() => {
             <div className=''>
                 <SectionHead title='About me'/>
             </div>
-            {/* <div className=' block lg:hidden md:hidden h-[1.5px] w-full dark:bg-[#C4C4C4]/30 bg-[#494E52]/20 rounded-full'></div> */}
             <span className={`${roboto.className} dark:text-[#C3C3C3] text-[#494E52]`}>
-                <span className='prose dark:prose-invert lg:text-[17.5px] text-[16px] break-words text-wrap list-none tracking-wide'>
+                <span className='prose dark:prose-invert lg:text-[17.5px] text-[16px] tracking-wide'>
                     <span className='hidden lg:block md:block'>
                         <PortableText value={AboutDocs.bio_desktopview}/>
                     </span>
