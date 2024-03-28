@@ -19,8 +19,8 @@ const Navmenu = () => {
     const path = usePathname()
     return (
         <>
-            <div className="mx-auto lg:max-w-[1050px] lg:max-h-[52px] justify-between items-center flex lg:px-[25px] px-[8px]  lg:py-2 py-[3px] bg-[#FFFFFF] bg-opacity-30 dark:bg-[#1D1B25] dark:bg-opacity-40 border dark:border-[#413A6F] border-[#FFFFFF] border-opacity-50 dark:border-opacity-40 rounded-[12px] duration-300 transition-all overflow-hidden">
-                <Image src={logo} alt='default_logo' width={1200} height={1200} className=' lg:w-[28px] w-6 object-contain' />
+            <div className="mx-auto lg:max-w-[1050px] lg:max-h-[52px] justify-between items-center flex lg:px-[25px] px-[8px] lg:py-2 py-[3px] bg-[#FFFFFF] bg-opacity-30 dark:bg-[#1D1B25] dark:bg-opacity-40 border dark:border-[#413A6F] border-[#FFFFFF] border-opacity-50 dark:border-opacity-40 rounded-[12px] duration-300 transition-all ">
+                <Image src={logo} alt='default_logo' width={120} height={120} className=' lg:w-[28px] w-6 object-contain' />
                 <div className=' lg:flex md:flex flex-row gap-6 font-medium lg:text-[16px] md:text-[12px] text-[12px] text-[#22242C] dark:text-[#C4C4C4] duration-300 hidden '>
                 {NavLinks.map((route_name, i) => (
                         <Link aria-label={route_name.name} href={`${route_name.route}`} key={route_name.name}>

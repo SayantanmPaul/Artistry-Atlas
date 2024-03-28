@@ -61,8 +61,8 @@ const NavDropDown = () => {
         className='border border-[#C4C4C4] dark:border-[#14141D] border-opacity-30 rounded-full hover:border-opacity-90 hover:animate-spinonce duration-300 ease-in-out'>
           <FiCommand size={16} className=' lg:w-4 lg:h-4 w-[18px] h-[18px] lg:m-[11px] m-[8px]' />
       </button>
-        <div className={`absolute left-0 w-full max-w-[96%] md:max-w-[97.5%] inset-0 mx-auto ${isClicked===false ? 'top-16': '-top-[522px] md:-top-[640px]'} duration-1000 ease-out-expo  h-[46vh] md:h-[42vh]`}>
-          <div className=' p-[12px] flex flex-col gap-[4px] bg-[#F6E3FE]/70 dark:bg-[#1D1B25]/70 backdrop-blur-lg border dark:border-[#413A6F]/40 border-[#D0CADF] rounded-[8px] custom-blur'>
+        <div className={`absolute left-0 w-full max-w-[96%] md:max-w-[97.5%] inset-0 mx-auto ${isClicked===false ? 'top-16': '-top-[522px] md:-top-[640px]'} duration-1000 ease-out-expo  h-[46vh] md:h-[42vh] z-40 `}>
+          <div className=' p-[12px] flex flex-col gap-[4px] bg-[#F6E3FE]/70 dark:bg-[#1D1B25]/70 border dark:border-[#413A6F]/40 border-[#D0CADF] rounded-[8px] custom-blur'>
           {NavLinks.map((route_name, i) => (
             <Link href={`${route_name.route}`} key={route_name.name}>
               <div onClick={() => handleActiveState(`${route_name.name}`)} className={`nav_font dark:text-[#F2F3F3] text-[#404040] leading-6 py-[3px]  text-[14px] flex flex-row justify-between ${route_name.route===path? "active duration-100 dark:text-[#F3F3F3] bg-[#413A6F]/20 dark:bg-white/10 px-[10px] rounded-[4px] dark:font-semibold font-semibold py-[4px]" : 'dark:font-medium font-semibold px-[10px] py-[4px] duration-300 ease-in-out'}`}>
