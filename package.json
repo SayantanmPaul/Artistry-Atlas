@@ -18,7 +18,7 @@
     "@radix-ui/react-tooltip": "^1.0.7",
     "@sanity/image-url": "^1.0.2",
     "@sanity/orderable-document-list": "^1.2.1",
-    "@sanity/vision": "^3.29.0",
+    "@sanity/vision": "^3.44.0",
     "@vercel/analytics": "^1.2.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
