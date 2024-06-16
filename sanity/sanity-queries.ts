@@ -4,6 +4,7 @@ import { Tool } from "@/types/tools-type";
 import { Project } from "@/types/project-type";
 import { Links } from "@/types/link-type";
 import { Education } from "@/types/education-type";
+import { Experience } from "@/types/experience-type";
 //about myself data
 export const aboutMySlef = async():Promise<About>=> {
     const query = 
@@ -116,4 +117,24 @@ export const EducationData = async (): Promise<Education[]> => {
         }`
     )
     return educationQuery
+}
+
+//experience data
+export const ExperienceData = async(): Promise<Experience[]> => {
+    const experienceQuery = await client.fetch(
+        `*[_type=='experience'] | order(orderRank){
+            _id,
+            _createdAt,
+            company,
+            "company_logo":company_logo.asset->url,
+            position,
+            location,
+            startDate,
+            endDate,
+            currentjob,
+            stack,
+            description
+        }`
+    )
+    return experienceQuery
 }

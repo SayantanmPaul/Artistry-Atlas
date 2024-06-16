@@ -8,8 +8,12 @@ const NavLinks = [
         route: '/projects'
     },
     {
-        name: 'career',
-        route: '/career'
+        name: 'work',
+        route: '/work'
+    },
+    {
+        name: 'learning',
+        route: '/learning'
     },
     {
         name: 'technologies',

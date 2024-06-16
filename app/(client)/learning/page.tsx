@@ -1,9 +1,9 @@
 import React from 'react'
-import CareerSection from '@/app/sections/career-section'
 import StickyBar from '@/components/StickyBar'
 import PageWrapper from '@/app/page-wrapper'
+import LearningSection from '@/app/sections/learning-section'
 
-const Career = () => {
+const Academic = () => {
   return (
     <>
     <div className='mx-auto max-w-full lg:max-w-[1018px] flex lg:flex-row flex-col lg:gap-16 gap-3 lg:pt-[64px] md:pt-[24px] pt-4 px-4 lg:px-0 md:px-4 lg:pl-0'>
@@ -12,7 +12,7 @@ const Career = () => {
       </div>
     <PageWrapper>
       <div>
-        <CareerSection/>
+        <LearningSection/>
       </div>
     </PageWrapper>
     </div>
@@ -20,4 +20,4 @@ const Career = () => {
   )
 }
 
-export default Career
+export default Academic
