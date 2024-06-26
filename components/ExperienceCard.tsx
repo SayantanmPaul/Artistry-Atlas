@@ -1,16 +1,20 @@
+"use client"
 import { Experience } from '@/types/experience-type'
 import { PortableText } from '@portabletext/react';
 import moment from 'moment';
-import { Inter } from 'next/font/google';
+import { Inter, Poppins } from 'next/font/google';
 import Image from 'next/image';
-import React from 'react'
+import React, { useState } from 'react'
+import { FaCaretRight } from 'react-icons/fa';
 import { TiLocation } from 'react-icons/ti';
 
 const interbold = Inter({ weight: '700', subsets: ['latin'] })
+const poppinsbold= Poppins({weight: '700', subsets: ['latin']})
 
 const ExperienceCard = ({ data }: { data: Experience }) => {
     const startDate = moment(data.startDate).format("MMM-YYYY");
     const endDate = moment(data.endDate).format("MMM-YYYY");
+    const [learnMore, setLearnMore] = useState(true)
 
     return (
         <>
@@ -23,11 +27,11 @@ const ExperienceCard = ({ data }: { data: Experience }) => {
                         alt={data.company}
                     />
                 </span>
-                <div className="flex flex-col gap-[4px]">
+                <div className="flex flex-col gap-1 w-full items-start">
                     <div className="flex items-center justify-between lg:gap-[186px] md:w-[576px] gap-5">
                         <p className={`${interbold.className} font-semibold md:text-xl`}>{data.company}</p>
                         <p className="whitespace-nowrap text-xs font-medium tracking-tight text-neutral-700 dark:text-neutral-400">
-                            {startDate} - {data?.currentjob? 'present': endDate}
+                            {startDate} - {data?.currentjob ? 'present' : endDate}
                         </p>
                     </div>
                     <p className="gradient-text text-sm font-medium">{data.position}</p>
@@ -40,7 +44,18 @@ const ExperienceCard = ({ data }: { data: Experience }) => {
                             <p>{data.stack}</p>
                         </span>
                     </div>
-                    <span className='prose dark:prose-invert text-wrap text-[14px] leading-[27px]'>
+                    <button
+                        className={` pt-2 flex flex-row justify-between items-center w-full group`}
+                        onClick={() => setLearnMore(!learnMore)}
+                    >
+                        <p className={`group-hover:underline text-transparent bg-clip-text bg-gradient-to-r from-[#00C6FB] to-[#005BEA] font-bold text-xs ${poppinsbold.className}`}>
+                            {learnMore ? "read less" : "know more about it"}
+                        </p>
+                        <FaCaretRight
+                            className={`${learnMore ? 'rotate-90' : 'rotate-0'} text-[#0082F0] duration-300 ease-in-out w-3 h-3`}
+                        />
+                    </button>
+                    <span className={`prose dark:prose-invert w-full text-sm leading-6 ${learnMore ? 'open' : 'closed'}`}>
                         <PortableText value={data?.description} />
                     </span>
                 </div>
@@ -49,4 +64,5 @@ const ExperienceCard = ({ data }: { data: Experience }) => {
     )
 }
 
-export default ExperienceCard
+export default ExperienceCard;
+
