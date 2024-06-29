@@ -2,7 +2,12 @@ import React from 'react'
 import TechStackSection from '@/app/sections/techstack-section'
 import StickyBar from '@/components/StickyBar'
 import PageWrapper from '@/app/page-wrapper'
+import { Metadata } from 'next'
 
+export const metadata: Metadata = {
+  title: "Technologies",
+  description: "Does language matters? my answer would be yes and no at the same time, I'm in a phase of learning about adaptivity, code refactoring, improving code quality etc."
+}
 const Technologies = () => {
   return (
     <>

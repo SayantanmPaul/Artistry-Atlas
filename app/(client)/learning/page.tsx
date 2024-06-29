@@ -2,7 +2,12 @@ import React from 'react'
 import StickyBar from '@/components/StickyBar'
 import PageWrapper from '@/app/page-wrapper'
 import LearningSection from '@/app/sections/learning-section'
+import { Metadata } from 'next'
 
+export const metadata: Metadata = {
+  title: "Qualifications",
+  description: "Academic qualification of myself, though I'm constantly learning new things in my life."
+}
 const Academic = () => {
   return (
     <>

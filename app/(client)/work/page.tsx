@@ -1,8 +1,13 @@
 import PageWrapper from '@/app/page-wrapper'
 import WorkSection from '@/app/sections/work-section'
 import StickyBar from '@/components/StickyBar'
+import { Metadata } from 'next'
 import React from 'react'
 
+export const metadata: Metadata = {
+    title: "Experiences",
+    description: "I have experience working with a few companies, small… big… but I loved what I able to contribute there and learn from there!"
+}
 const Work = () => {
     return (
         <>

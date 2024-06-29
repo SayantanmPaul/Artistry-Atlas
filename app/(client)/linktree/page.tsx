@@ -2,8 +2,15 @@
 import PageWrapper from '@/app/page-wrapper'
 import LinktreeSection from '@/app/sections/linktree-section'
 import FooterComp from '@/components/FooterComp'
+import { Metadata } from 'next'
 import React from 'react'
 
+export const metadata: Metadata = {
+  title: {
+    absolute: "get in touch",
+  },
+  description: "Want to create some awesome stuff? Or want to have a friendly convo? Drop a DM."
+}
 const LinkTree = () => {
   return (
     <>

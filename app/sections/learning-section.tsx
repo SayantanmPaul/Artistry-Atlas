@@ -8,7 +8,6 @@ const LearningSection = async() => {
   const educationInfo = await EducationData()
   const experienceInfo = await ExperienceData()
   
-  console.log(experienceInfo);
   return (
     <div className='flex flex-col gap-[20px] lg:gap-[28px] justify-start w-full'   >
       <SectionHead title='Academic Learning' />

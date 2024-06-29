@@ -1,9 +1,14 @@
 import PageWrapper from '@/app/page-wrapper'
 import ProjectsSection from '@/app/sections/projects-section'
 import StickyBar from '@/components/StickyBar'
+import { Metadata } from 'next'
 import React from 'react'
 
 // export const dynamic = 'force-dynamic'
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "Explore my projects to get a deeper understanding my learning implementation and contribution in multiple real world scenario."
+}
 const Projects = () => {
   return (
     <>
@@ -17,7 +22,6 @@ const Projects = () => {
           </div>
         </PageWrapper>
         </div>
-
     </>
   )
 }

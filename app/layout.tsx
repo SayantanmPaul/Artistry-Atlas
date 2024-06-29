@@ -10,8 +10,16 @@ import TopLoadingBar from "@/components/TopLoadingBar";
 import Preloader from "@/components/Preloader";
 
 export const metadata:Metadata={
-  title: "Sayantan Paul | Developer ",
+  title: {
+    default: "Sayantan Paul | Developer ",
+    template: "%s: Sayantan Paul | Developer "
+  },
   description: "Sayantan Paul is a passionate Cross Platform Developer focusing on continuous learning and solving real-world challenges.",
+  twitter: {
+    card: "summary_large_image"
+  },
+  
+  keywords: ["Cross Platform Developer", "Full Stack Developer", "Software Engineer", "Full Stack Software Engineer", "Backend Developer", "Frontend Developer", "Developer Analyst", "Data Analyst"]
 }
 
 export default function RootLayout({
