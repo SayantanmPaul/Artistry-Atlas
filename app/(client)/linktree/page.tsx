@@ -1,4 +1,3 @@
-'use client'
 import PageWrapper from '@/app/page-wrapper'
 import LinktreeSection from '@/app/sections/linktree-section'
 import FooterComp from '@/components/FooterComp'
