@@ -2,19 +2,19 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
     return [
         {
-            url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+            url: `https://www.sayantanpaul.com/`,
             priority: 1
         },
         {
-            url: `${process.env.NEXT_PUBLIC_BASE_URL}/projects`,
+            url: `https://www.sayantanpaul.com/projects`,
             priority: 0.8
         },
         {
-            url: `${process.env.NEXT_PUBLIC_BASE_URL}/work`,
+            url: `https://www.sayantanpaul.com/work`,
             priority: 0.6
         },
         {
-            url: `${process.env.NEXT_PUBLIC_BASE_URL}/linktree`,
+            url: `https://www.sayantanpaul.com/linktree`,
             priority: 0.5
         },
     ]

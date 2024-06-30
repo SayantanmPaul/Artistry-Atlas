@@ -18,7 +18,25 @@ export const metadata:Metadata={
   twitter: {
     card: "summary_large_image"
   },
-  
+  openGraph: {
+    title: "Sayantan Paul | Developer",
+    description: "Sayantan Paul is a passionate Cross Platform Developer focusing on continuous learning and solving real-world challenges.",
+    url: "https://www.sayantanpaul.com/",
+    siteName: 'Sayantan Paul',
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 800,
+        height: 600
+      },
+      {
+        url: "/opengraph-image.png",
+        width: 1800,
+        height: 1600,
+        alt: "Sayantan Paul | Developer"
+      },
+    ]
+  },
   keywords: ["Cross Platform Developer", "Full Stack Developer", "Software Engineer", "Full Stack Software Engineer", "Backend Developer", "Frontend Developer", "Developer Analyst", "Data Analyst"]
 }
 

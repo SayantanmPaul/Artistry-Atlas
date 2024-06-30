@@ -29,7 +29,7 @@ const AboutSection = async() => {
                 </span>
             </span>
             <span className='lg:inline-flex md:inline-flex items-start lg:mb-2 mb-4 '>
-            <Link href="/sayantanpaul-resume.pdf" passHref legacyBehavior>
+            <Link href="/Sayantan_Paul_Resume_2024.pdf" passHref legacyBehavior>
                 <a target="_blank" rel="noref">
                 <Button
                     size='default'
