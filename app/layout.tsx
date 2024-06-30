@@ -22,7 +22,7 @@ export const metadata:Metadata={
     title: "Sayantan Paul | Developer",
     description: "Sayantan Paul is a passionate Cross Platform Developer focusing on continuous learning and solving real-world challenges.",
     url: "https://www.sayantanpaul.com/",
-    siteName: 'Sayantan Paul',
+    siteName: 'sayantanpaul.com',
     images: [
       {
         url: "/opengraph-image.png",
