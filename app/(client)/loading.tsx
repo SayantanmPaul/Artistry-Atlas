@@ -22,6 +22,7 @@ const Loading = () => {
                   height={116}
                   style={{height: "176px",width: '176px' }}
                   className='animate-pulse object-contain'
+                  unoptimized={true}
               />
           </motion.div>
       </section>

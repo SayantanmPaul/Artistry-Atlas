@@ -8,6 +8,7 @@ import { structureTool } from 'sanity/structure'
 import {apiVersion, dataset, projectId} from './sanity/env'
 import {schema} from './sanity/schema'
 import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
+import { vercelDeployTool } from 'sanity-plugin-vercel-deploy'
 
 export default defineConfig({
   basePath: '/admin',
@@ -33,6 +34,8 @@ export default defineConfig({
     }),
     // Vision is a tool that lets you query your content with GROQ in the studio
     // https://www.sanity.io/docs/the-vision-plugin
-    visionTool({defaultApiVersion: apiVersion}),
+    visionTool({ defaultApiVersion: apiVersion }),
+
+    vercelDeployTool(),
   ],
 })
