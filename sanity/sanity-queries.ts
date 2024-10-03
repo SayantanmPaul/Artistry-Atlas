@@ -5,10 +5,10 @@ import { Project } from "@/types/project-type";
 import { Links } from "@/types/link-type";
 import { Education } from "@/types/education-type";
 import { Experience } from "@/types/experience-type";
+
 //about myself data
-export const aboutMySlef = async():Promise<About>=> {
-    const query = 
-        `*[_type=='about'][0]{
+export const aboutMySlef = async (): Promise<About> => {
+  const query = `*[_type=='about'][0]{
             _id,
             adminimage,
             bannerimage,
@@ -17,15 +17,19 @@ export const aboutMySlef = async():Promise<About>=> {
             bio_mobileview,
             slug,
 
-        }`
-    const getAdminData=await client.fetch(query)
-    return getAdminData
-}
+        }`;
+  const getAdminData = await client.fetch(
+    query,
+    {},
+    { next: { revalidate: 60 } }
+  );
+  return getAdminData;
+};
 
 //tech stack data
 export const TechTools = async (): Promise<Tool[]> => {
-    const toolQuery = await client.fetch(
-        `*[_type=='tool'] | order(orderRank){
+  const toolQuery = await client.fetch(
+    `*[_type=='tool'] | order(orderRank){
             _id,
             name,
             "slug":slug.current,
@@ -33,16 +37,18 @@ export const TechTools = async (): Promise<Tool[]> => {
             category->{
                 title
             }
-        }`
-    )
-    return toolQuery
-}
+        }`,
+    {},
+    { next: { revalidate: 60 } }
+  );
+  return toolQuery;
+};
 
 //projects data
 
-export const projectList = async(): Promise<Project[]>=> {
-    const projectQuery = await client.fetch(
-        `*[_type=='project'] | order(orderRank){
+export const projectList = async (): Promise<Project[]> => {
+  const projectQuery = await client.fetch(
+    `*[_type=='project'] | order(orderRank){
             _id,
             title,
             metadescription,
@@ -51,16 +57,18 @@ export const projectList = async(): Promise<Project[]>=> {
             isFeatured,
             catagory,
             "logo":icon.asset->url
-        }`
-    )
-    return projectQuery
-}
+        }`,
+    {},
+    { next: { revalidate: 60 } }
+  );
+  return projectQuery;
+};
 
 //project's detailed information
 
-export const projectDetails = async(slug:string): Promise<Project>=> {
-    const projecDatatQuery = await client.fetch(
-        `*[_type=='project' && slug.current == $slug][0]{
+export const projectDetails = async (slug: string): Promise<Project> => {
+  const projecDatatQuery = await client.fetch(
+    `*[_type=='project' && slug.current == $slug][0]{
             _id,
             title,
             metadescription,
@@ -76,25 +84,28 @@ export const projectDetails = async(slug:string): Promise<Project>=> {
             projectstatus,
             tools[]
         }`,
-        { slug: slug },
-    )
-    return projecDatatQuery
-}
+    { slug: slug },
+    { next: { revalidate: 60 } }
+  );
+  return projecDatatQuery;
+};
 
 //other links data
 
-export const linkList = async(): Promise<Links[]>=> {
-    const linkQuery = await client.fetch(
-        `*[_type=='links'] | order(orderRank){
+export const linkList = async (): Promise<Links[]> => {
+  const linkQuery = await client.fetch(
+    `*[_type=='links'] | order(orderRank){
             _id,
             title,
             type,
             url,
             "logo":logo.asset->url
-        }`
-    )
-    return linkQuery
-}
+        }`,
+    {},
+    { next: { revalidate: 60 } }
+  );
+  return linkQuery;
+};
 
 // // fetch delay testing purpose
 // export async function ConstWait(ms: number) {
@@ -103,8 +114,8 @@ export const linkList = async(): Promise<Links[]>=> {
 
 //Education Data
 export const EducationData = async (): Promise<Education[]> => {
-    const educationQuery = await client.fetch(
-        `*[_type=='education'] | order(orderRank){
+  const educationQuery = await client.fetch(
+    `*[_type=='education'] | order(orderRank){
             _id,
             institution,
             field,
@@ -114,15 +125,17 @@ export const EducationData = async (): Promise<Education[]> => {
             startDate,
             endDate,
             "institutionlogo": institutionlogo.asset->url,
-        }`
-    )
-    return educationQuery
-}
+        }`,
+    {},
+    { next: { revalidate: 60 } }
+  );
+  return educationQuery;
+};
 
 //experience data
-export const ExperienceData = async(): Promise<Experience[]> => {
-    const experienceQuery = await client.fetch(
-        `*[_type=='experience'] | order(orderRank){
+export const ExperienceData = async (): Promise<Experience[]> => {
+  const experienceQuery = await client.fetch(
+    `*[_type=='experience'] | order(orderRank){
             _id,
             _createdAt,
             company,
@@ -134,7 +147,9 @@ export const ExperienceData = async(): Promise<Experience[]> => {
             currentjob,
             stack,
             description
-        }`
-    )
-    return experienceQuery
-}
+        }`,
+    {},
+    { next: { revalidate: 60 } }
+  );
+  return experienceQuery;
+};
