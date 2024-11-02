@@ -16,7 +16,6 @@ const ProjectTab = ({
         data: Project,
         isFeatured?: boolean
     }) => {
-
     return (
     <span className='p-[2.1px] bg-[#7FEBEE] hover:bg-gradient-to-r hover:from-[#1798FF] hover:to-[#D65DFE] lg:rounded-[7px] rounded-[10px] cursor-pointer duration-300 ease-in-out object-cover relative'>
         <Link href={`/projects/${data.slug}`}>

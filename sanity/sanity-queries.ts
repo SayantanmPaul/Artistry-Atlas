@@ -8,7 +8,8 @@ import { Experience } from "@/types/experience-type";
 
 //about myself data
 export const aboutMySlef = async (): Promise<About> => {
-  const query = `*[_type=='about'][0]{
+  const getAdminData = await client.fetch(
+    `*[_type=='about'][0]{
             _id,
             adminimage,
             bannerimage,
@@ -16,10 +17,7 @@ export const aboutMySlef = async (): Promise<About> => {
             bio_desktopview,
             bio_mobileview,
             slug,
-
-        }`;
-  const getAdminData = await client.fetch(
-    query,
+        }`,
     {},
     { next: { revalidate: 60 } }
   );
