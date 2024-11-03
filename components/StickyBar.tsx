@@ -67,8 +67,6 @@ const SocialsLogo: { [key: string]: React.ElementType } = {
 const StickyBar = async () => {
   const AboutDocs: About = await aboutMySlef();
 
-  console.log(AboutDocs.metadescription);
-
   return (
     <>
       <div className=" block lg:hidden absolute inset-2 top-[70px] -z-10">
