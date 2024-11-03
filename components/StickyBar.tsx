@@ -10,8 +10,6 @@ import {
 import { Roboto } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import myself from "../public/assets/myself/img_0672.png";
-import banner from "../public/assets/myself/mobilebanner.png";
 import { Button } from "./ui/button";
 import { aboutMySlef } from "@/sanity/sanity-queries";
 import { About } from "@/types/about-type";

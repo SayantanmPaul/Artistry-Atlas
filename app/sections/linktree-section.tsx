@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import myself from "@/public/assets/myself/img_0672.png";
 import { Ibarra_Real_Nova, Poppins, Raleway } from "next/font/google";
 import { linkList } from "@/sanity/sanity-queries";
 import { Links } from "@/types/link-type";
