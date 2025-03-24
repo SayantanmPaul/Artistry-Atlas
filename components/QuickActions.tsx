@@ -1,26 +1,24 @@
 'use client'
-import React, { useEffect, useState} from 'react'
-import Link from 'next/link';
-import Image from 'next/image';
 import {
     AlertDialog,
     AlertDialogCancel,
     AlertDialogContent,
     AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
-import { FiCommand } from "react-icons/fi";
-import { MdOutlineEmail } from "react-icons/md";
-import { BiMessageDetail } from "react-icons/bi";
-import { FiGithub } from "react-icons/fi";
+} from "@/components/ui/alert-dialog";
+import { useTheme } from 'next-themes';
+import { Inter } from 'next/font/google';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { BsTwitterX } from "react-icons/bs";
 import { FaMedium } from "react-icons/fa6";
-import NoSPam from '../public/assets/nospam.png'
-import Space from '../public/assets/spacedev.png'
+import { FiCommand, FiGithub } from "react-icons/fi";
+import { MdOutlineEmail } from "react-icons/md";
+import { toast } from 'sonner';
+import NoSPam from '../public/assets/nospam.png';
+import Space from '../public/assets/spacedev.png';
 import MessageDialog from './MessageDialog';
 import ThemeSwitch from './ThemeSwitch';
-import { Inter } from 'next/font/google'
-import { useTheme } from 'next-themes'
-import { toast } from 'sonner';
 
 const interbold = Inter({
     weight: '700',
@@ -36,12 +34,12 @@ const interregular = Inter({
 const media = [
     {
         name: 'Github',
-        link: 'https://github.com/SayantanmPaul/',
+        link: 'https://github.com/SayantanmPaul',
         logo: FiGithub
     },
     {
         name: 'X (Twitter)',
-        link: 'https://twitter.com/impaul_p78814',
+        link: 'https://twitter.com/sayantanm_p',
         logo: BsTwitterX
     },
     {
@@ -54,7 +52,7 @@ const media = [
 const QuickActions = () => {
     const { theme, setTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
-    
+
     useEffect(() => {
         setMounted(true)
     }, [])
@@ -62,7 +60,7 @@ const QuickActions = () => {
     //email copy to clipboard
 
     const EmailCopy = 'iam.paulsayantan06@gmail.com'
-    
+
     const copyToClip=() => {
         navigator.clipboard.writeText(EmailCopy)
         toast('email is copied ✨', {
@@ -96,7 +94,7 @@ const QuickActions = () => {
                     </div>
                 </div>
                 <div className=' dark:bg-border bg-[#E5E5E5] w-full h-[1px]'></div>
-            </div>    
+            </div>
         </div>
         <div className='pt-[42px]'>
             <div className=' text-[#404040] dark:text-[#FFFFFF] text-[12px] font-semibold leading-[16px] w-full bg-[#D0CADF]/40 dark:bg-[#413A6F]/20 pl-[8px] py-[4px] rounded-[4px]'>Suggested</div>
@@ -105,7 +103,7 @@ const QuickActions = () => {
             <div className=' flex flex-col items-center gap-[5px] group '>
                 <Link href='/'>
                     <div className=' bg-[#D0CADF]/40 dark:bg-slate-200 dark:group-hover:bg-white group-hover:bg-[#D0CADF]/70 w-[40px] h-[40px] rounded-md flex justify-center items-center duration-300 ease-in-out '>
-                        <Image src={NoSPam} alt='nospam_project' width={30} height={30} className='w-6 group-hover:scale-105 duration-300 ease-in-out' /> 
+                        <Image src={NoSPam} alt='nospam_project' width={30} height={30} className='w-6 group-hover:scale-105 duration-300 ease-in-out' />
                     </div>
                 </Link>
                 <p className=' text-[#8B8B8B] dark:text-[#AFAFAF] dark:group-hover:text-white group-hover:text-[#404040] leading-[22px] font-medium text-[12px] duration-300 ease-in-out'>NoSpam.</p>
@@ -113,14 +111,14 @@ const QuickActions = () => {
             <div className='flex flex-col items-center gap-[5px] group'>
                 <Link href='/'>
                     <div className=' bg-[#D0CADF]/40 dark:bg-slate-200 dark:group-hover:bg-white group-hover:bg-[#D0CADF]/70 w-[40px] h-[40px] rounded-md flex justify-center items-center duration-300 ease-in-out'>
-                        <Image src={Space} alt='spacedev_project' width={30} height={30} className='w-[28px] group-hover:scale-110 duration-300 ease-in-out' /> 
+                        <Image src={Space} alt='spacedev_project' width={30} height={30} className='w-[28px] group-hover:scale-110 duration-300 ease-in-out' />
                     </div>
                 </Link>
                 <p className=' text-[#8B8B8B] dark:text-[#AFAFAF] dark:group-hover:text-white leading-[22px] font-medium text-[12px] duration-300 ease-in-out group-hover:text-[#404040]'>SpaceDev</p>
             </div>
             <div className=' h-full w-[2px] bg-[#D0CADF]/40 dark:bg-[#413A6F]/20'></div>
             <div className='flex flex-col items-center gap-[5px] group'>
-                <button 
+                <button
                     onClick={copyToClip}
                     className=' bg-[#D0CADF]/40 dark:bg-[#413A6F]/20 dark:group-hover:bg-[#413A6F]/40 group-hover:bg-[#D0CADF]/60 w-[40px] h-[40px] rounded-md flex justify-center items-center duration-300 ease-in-out'>
                     <MdOutlineEmail size={25} className=' dark:text-white text-[#06030B]' />
@@ -145,7 +143,7 @@ const QuickActions = () => {
                 <Link key={social.name} href={`${social.link}`} passHref legacyBehavior>
                     <a target='_blank'>
                         <div className=' w-full hover:bg-[#D0CADF]/40 dark:hover:bg-[#413A6F]/20 px-[8px] py-[4px] rounded-[4px] duration-300 ease-in-out flex flex-row gap-[8px] items-center justify-start'>
-                            <div className='flex flex-row justify-between w-full items-center'>          
+                            <div className='flex flex-row justify-between w-full items-center'>
                                 <div className='flex flex-row gap-[8px] items-center'>
                                     <div className='w-[24px] h-[24px] rounded-[4px] dark:bg-[#F2F3F3] bg-[#06030B] flex justify-center items-center'>
                                         <social.logo size={20} className='dark:text-black text-white w-[16px] h-[16px]' />
@@ -158,11 +156,11 @@ const QuickActions = () => {
                     </a>
                 </Link>
                 )})}
-                </div>    
+                </div>
             </AlertDialogContent>
         </AlertDialog>
     </div>
-        
+
     </>
 )}
 

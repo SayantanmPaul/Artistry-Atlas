@@ -1,25 +1,24 @@
-import React from "react";
-import Image from "next/image";
-import { Ibarra_Real_Nova, Poppins, Raleway } from "next/font/google";
-import { linkList } from "@/sanity/sanity-queries";
-import { Links } from "@/types/link-type";
-import { Project } from "@/types/project-type";
-import { projectList } from "@/sanity/sanity-queries";
-import { ImArrowUpRight2 } from "react-icons/im";
-import Link from "next/link";
-import { FaSquareXTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa6";
-import { FiGithub } from "react-icons/fi";
-import { MdAlternateEmail } from "react-icons/md";
-import { mainSocials } from "../utils/mainSocials";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { aboutMySlef } from "../../sanity/sanity-queries";
 import { urlForImage } from "@/sanity/lib/image";
+import { linkList, projectList } from "@/sanity/sanity-queries";
 import { About } from "@/types/about-type";
+import { Links } from "@/types/link-type";
+import { Project } from "@/types/project-type";
+import { Ibarra_Real_Nova, Poppins, Raleway } from "next/font/google";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { FaDribbble, FaLinkedinIn, FaSquareXTwitter } from "react-icons/fa6";
+import { FiGithub } from "react-icons/fi";
+import { ImArrowUpRight2 } from "react-icons/im";
+import { MdAlternateEmail } from "react-icons/md";
+import { aboutMySlef } from "../../sanity/sanity-queries";
+import { mainSocials } from "../utils/mainSocials";
 
 const Ibarra = Ibarra_Real_Nova({
   weight: "600",
@@ -33,7 +32,7 @@ const SocialsLogo: { [key: string]: React.ElementType } = {
   FaSquareXTwitter: FaSquareXTwitter,
   FaLinkedinIn: FaLinkedinIn,
   FiGithub: FiGithub,
-  FaInstagram: FaInstagram,
+  FaDribbble: FaDribbble,
   MdAlternateEmail: MdAlternateEmail,
 };
 

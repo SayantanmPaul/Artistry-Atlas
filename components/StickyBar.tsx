@@ -1,19 +1,18 @@
-import React from "react";
-import { HiLocationMarker } from "react-icons/hi";
-import { MdEmail } from "react-icons/md";
-import {
-  FaSquareXTwitter,
-  FaLinkedin,
-  FaGithub,
-  FaInstagram,
-} from "react-icons/fa6";
+import { urlForImage } from "@/sanity/lib/image";
+import { aboutMySlef } from "@/sanity/sanity-queries";
+import { About } from "@/types/about-type";
 import { Roboto } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "./ui/button";
-import { aboutMySlef } from "@/sanity/sanity-queries";
-import { About } from "@/types/about-type";
-import { urlForImage } from "@/sanity/lib/image";
+import React from "react";
+import {
+  FaDribbble,
+  FaGithub,
+  FaLinkedin,
+  FaSquareXTwitter,
+} from "react-icons/fa6";
+import { HiLocationMarker } from "react-icons/hi";
+import { MdEmail } from "react-icons/md";
 
 const robotoBold = Roboto({
   weight: "700",
@@ -30,8 +29,13 @@ const robotoRegular = Roboto({
 //socials links
 const featuredSocials = [
   {
+    name: "Github",
+    link: "https://github.com/SayantanmPaul",
+    logo: "FaGithub",
+  },
+  {
     name: "Twitter",
-    link: "https://twitter.com/impaul_p78814",
+    link: "https://twitter.com/sayantanm_p",
     logo: "FaSquareXTwitter",
   },
   {
@@ -41,14 +45,9 @@ const featuredSocials = [
     color: "text-[#0966c2]",
   },
   {
-    name: "Github",
-    link: "https://github.com/SayantanmPaul",
-    logo: "FaGithub",
-  },
-  {
-    name: "Instagram",
-    link: "https://www.instagram.com/sayantanpaul.11",
-    logo: "FaInstagram",
+    name: "Dribbble",
+    link: "https://www.dribbble.com/sayantanm_p",
+    logo: "FaDribbble",
     color: "text-[#FC00FF]",
   },
 ];
@@ -59,7 +58,7 @@ const SocialsLogo: { [key: string]: React.ElementType } = {
   FaSquareXTwitter: FaSquareXTwitter,
   FaLinkedin: FaLinkedin,
   FaGithub: FaGithub,
-  FaInstagram: FaInstagram,
+  FaDribbble: FaDribbble,
 };
 
 const StickyBar = async () => {

@@ -1,12 +1,11 @@
-import React from 'react'
-import { PortableText } from "@portabletext/react";
-import { About } from '@/types/about-type';
-import { aboutMySlef } from '@/sanity/sanity-queries';
-import { Roboto } from 'next/font/google';
-import { Button } from '@/components/ui/button';
-import { PiReadCvLogoBold } from "react-icons/pi";
 import SectionHead from '@/components/SectionHead';
+import { Button } from '@/components/ui/button';
+import { aboutMySlef } from '@/sanity/sanity-queries';
+import { About } from '@/types/about-type';
+import { PortableText } from "@portabletext/react";
+import { Roboto } from 'next/font/google';
 import Link from 'next/link';
+import { PiReadCvLogoBold } from "react-icons/pi";
 
 const roboto = Roboto({ subsets: ['latin'], weight: '400' })
 
@@ -29,7 +28,7 @@ const AboutSection = async() => {
                 </span>
             </span>
             <span className='lg:inline-flex md:inline-flex items-start lg:mb-2 mb-4 '>
-            <Link href="/SayantanPaul_SDE1_Resume.pdf" passHref legacyBehavior>
+            <Link href="/Sayantan_Paul_Resume.pdf" passHref legacyBehavior>
                 <a target="_blank" rel="noref">
                 <Button
                     size='default'
@@ -41,7 +40,7 @@ const AboutSection = async() => {
                 </a>
             </Link>
             </span>
-            <div className='py-4'></div>      
+            <div className='py-4'></div>
         </div>
     </>
 )}

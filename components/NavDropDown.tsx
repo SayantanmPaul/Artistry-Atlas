@@ -1,15 +1,14 @@
   'use state'
-import React, {useState, useEffect} from 'react'
-import { FiCommand } from "react-icons/fi";
-import NavLinks from '../constant/index'
+import { useTheme } from 'next-themes';
 import Link from 'next/link';
-import { FaChevronRight } from "react-icons/fa";
-import { FiGithub } from "react-icons/fi";
-import { BsTwitterX } from "react-icons/bs";
-import { FaMedium } from "react-icons/fa6";
-import ThemeSwitch from './ThemeSwitch';
-import { useTheme } from 'next-themes'
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { BsTwitterX } from "react-icons/bs";
+import { FaChevronRight } from "react-icons/fa";
+import { FaMedium } from "react-icons/fa6";
+import { FiCommand, FiGithub } from "react-icons/fi";
+import NavLinks from '../constant/index';
+import ThemeSwitch from './ThemeSwitch';
 
 const media = [
   {
@@ -19,7 +18,7 @@ const media = [
   },
   {
       name: 'X (Twitter)',
-      link: 'https://twitter.com/impaul_p78814',
+      link: 'https://twitter.com/sayantanm_p',
       logo: BsTwitterX
   },
   {
@@ -35,7 +34,7 @@ const NavDropDown = () => {
   const [isClicked, setisClicked] = useState(true)
 
   const path = usePathname()
-  
+
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -83,7 +82,7 @@ const NavDropDown = () => {
               return (
               <Link key={i} href={_.link}>
                 <div className=' w-full hover:bg-[#D0CADF]/40 dark:hover:bg-[#413A6F]/20 px-[8px] py-[4px] rounded-[4px] duration-300 ease-in-out flex justify-start'>
-                    <div className='flex flex-row justify-between w-full items-center '>          
+                    <div className='flex flex-row justify-between w-full items-center '>
                       <div className='flex flex-row gap-[8px] items-center justify-center'>
                         <div className='w-[20px] h-[20px] rounded-[4px] dark:bg-[#F2F3F3] bg-[#06030B] flex justify-center items-center'>
                           <_.logo size={12} className='dark:text-black text-white w-[12px] h-[12px] duration-300 ease-in-out' />
@@ -106,7 +105,7 @@ const NavDropDown = () => {
                 </div>
                 <p className='text-[#8B8B8B] dark:text-[#AFAFAF] text-[12px] font-medium leading-[16px]'>/change mode </p>
               </div>
-            </div>  
+            </div>
           </div>
         </div>
     </div>
